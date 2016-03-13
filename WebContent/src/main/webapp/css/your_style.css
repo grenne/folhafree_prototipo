@@ -36,4 +36,7 @@
  .label-unavaliable {
 	background-color: #ff8000
 }
- 
+ .dz-message {
+ 	margin-left: .5em !important;
+ 	margin-top: 3em !important;
+ }

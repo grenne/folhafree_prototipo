@@ -116,8 +116,21 @@
           <h4 class="modal-title">Digite os dados da empresa</h4>
         </div>
         <div class="modal-body">
+
+			<!-- carrega logo -->
+			<article>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-4">
+						<form action="upload.php" class="dropzone" id="logoempresa"></form>
+				</div>
+				<div class="col-sm-4"></div>
+				<br><br>
+			</div>
+			</article>
+			
 			<!-- Widget ID (each widget will need unique ID)-->
-			<div class="jarviswidget" id="wid-id-21" data-widget-editbutton="false" data-widget-custombutton="false">
+			<div class="jarviswidget" id="wid-id-3" data-widget-editbutton="false" data-widget-custombutton="false">
 				<!-- widget options:
 					usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 					
@@ -131,22 +144,10 @@
 					data-widget-sortable="false"
 					
 				-->
-				<!-- carrega logo -->
-				<article>
-				<div class="row">
-					<div class="col-sm-2"></div>
-					<div class="col-sm-4">
- 						<form action="upload.php" class="dropzone" id="logoempresa"></form>
-					</div>
-					<div class="col-sm-4"></div>
-					<br><br>
-				</div>
-				</article>
-				
-				<!-- end widget content -->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-edit"></i> </span>
-				
+					<h2>Dados da empresa</h2>				
+					
 				</header>
 
 				<!-- widget div-->
@@ -163,33 +164,35 @@
 					<div class="widget-body no-padding">
 						
 						<form id="order-form" class="smart-form" novalidate="novalidate">
+							<header>
+								Contato
+							</header>
+
 							<fieldset>
-								<legend>
-								<h7>Contato</h7>
-								</legend>
 								<div class="row">
 									<section class="col col-6">
 										<label class="input"> <i class="icon-append fa fa-user"></i>
-											<input type="text" name="name" placeholder="Name">
+											<input type="text" name="namecontato" placeholder="Name">
 										</label>
 									</section>
 									<section class="col col-6">
 										<label class="input"> <i class="icon-append fa fa-phone"></i>
-											<input type="mobilephonr" name="mobilephone" placeholder="Mobile Phone" data-mask="(999) 99999-9999">
+											<input type="mobilephonr" name="celularcontato" placeholder="Mobile Phone" data-mask="(999) 99999-9999">
 										</label>
 									</section>
 									<section class="col col-6">
 										<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-											<input type="email" name="email" placeholder="E-mail">
+											<input type="email" name="emailcontato" placeholder="E-mail">
 										</label>
 									</section>
 								</div>
 							</fieldset>
 
+							<header>
+								Empresa
+							</header>
+
 							<fieldset>
-								<legend>
-								<h7>Empresa</h7>
-								</legend>
 								<div class="row">
 									<section class="col col-6">
 										<label class="input"> <i class="icon-append fa  fa-institution"></i>
@@ -252,67 +255,66 @@
 											<input type="email" name="email" placeholder="E-mail">
 										</label>
 									</section>
-									<section class="col col-6">
-										<div class="form-group">
-											<div class="col-md-10">
-												<input class="form-control" placeholder="Country type something..." type="text"  list="list">
-												<datalist id="list">
-													<option value="Brazil">Brazil</option>
-													<option value="Angola">Angola</option>
-													<option value="Zambia">Zambia</option>
-												</datalist>
-											</div>
-										</div>
-									</section>
-									<section class="col col-6">
-										<div class="form-group">
-											<div class="col-md-10">
-												<input class="form-control" placeholder="Province type something..." type="text"  list="list">
-												<datalist id="list">
-													<option value="Brazil">São Paulo</option>
-													<option value="Angola">Rio de Janeiro</option>
-													<option value="Zambia">Goias</option>
-												</datalist>
-											</div>
-										</div>
-									</section>
 								</div>
+							</fieldset>
 
-								<div class="row">
-									<section class="col col-6">
-										<div class="form-group">
-											<div class="col-md-10">
-												<input class="form-control" placeholder="City type something..." type="text"  list="list">
-												<datalist id="list">
-													<option value="Brazil">São Paulo</option>
-													<option value="Angola">Campinas</option>
-													<option value="Zambia">São Bernardo do Campo</option>
-												</datalist>
-											</div>
-										</div>
-									</section>
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa fa-home"></i>
-											<input type="zipcode" name="zipcode" placeholder="Zip code" data-mask="99999-99">
-										</label>
-									</section>
-								</div>
-+								<div class="row">
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa fa-home"></i>
-											<input type="street" name="steet" placeholder="Street" >
-										</label>
-									</section>
-								</div>
-							</fieldset>
+							<header>
+								Registros
+							</header>
+
 							<fieldset>
-								<header>
-									<span class="widget-icon"> <i class="fa fa-pencil"></i> </span>
-									<h2>A little about me...</h2>				
-									
-								</header>
-				
+								<div class="row">
+									<section class="col col-4">
+										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
+											<input type="text" name="cnpjempresa" placeholder="CNPJ">
+										</label>
+									</section>
+									<section class="col col-4">
+										<label class="input"> <i class="icon-append fa fa-file-text"></i>
+											<input type="text" name="inscricaoestadualempresa" placeholder="Inscrição Estadual" >
+										</label>
+									</section>
+									<section class="col col-4">
+										<label class="input"> <i class="icon-append fa fa-file-text"></i>
+											<input type="text" name="ceiempresa" placeholder="C.E.I.">
+										</label>
+									</section>
+									<section class="col col-4">
+										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
+											<input type="text" name="cpfempresa" placeholder="C.P.F.">
+										</label>
+									</section>
+									<section class="col col-4">
+										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
+											<input type="text" name="naturezaempresa" placeholder="Natureza">
+										</label>
+									</section>
+									<section class="col col-4">
+										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
+											<input type="text" name="atividadeempresa" placeholder="Ativ. Economica">
+										</label>
+									</section>
+								</div>
 							</fieldset>
+
+							<header>
+								Observações
+							</header>
+							<fieldset>
+								<section>
+									<label class="textarea"> <i class="icon-append fa fa-comment"></i> 										
+										<textarea rows="5" name="comment" placeholder="Observações"></textarea> 
+									</label>
+								</section>
+							</fieldset>
+							<footer>
+								<button type="submit" class="btn btn-primary">
+									Incluir
+								</button>
+								<button type="submit" class="btn btn-primary">
+									Desistir
+								</button>
+							</footer>
 						</form>
 
 					</div>
@@ -324,10 +326,6 @@
 			</div>
 			<!-- end widget -->				
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Confirm</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
         </div>
       </div>
       
@@ -885,11 +883,10 @@
 	
 					<div class="row">
 
-
 						<article class="col-sm-12 col-md-12 col-lg-6">
 
 							<!-- new widget -->
-							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-30" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-100" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
 
 								<!-- widget options:
 								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
@@ -906,10 +903,9 @@
 								-->
 
 								<header>
-									<span class="widget-icon"> <i class="fa fa-check txt-color-white"></i> </span>
-									<h2>Families</h2>
+									<span class="widget-icon"> <i class="fa fa-dollar txt-color-white"></i> </span>
+									<h2>Lançamentos de valores fixos</h2>
 									<div class="widget-toolbar">
-										<!-- add: non-hidden - to disable auto hide -->
 									</div>
 								</header>
 
@@ -926,21 +922,31 @@
 									<!-- widget content -->
 									<div class="widget-body no-padding">
 										
-										<table id="family_list" class="display projects-table table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-									        <thead>
-												<tr>
-													<th class="hasinput" >
-													</th>
-													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Filter Family" />
-													</th>
-												</tr>
-									            <tr>
-									                <th></th>
-									                <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>Family</th>
-									            </tr>
-									        </thead>
-									    </table>
+										<!--
+										The ID "widget-grid" will start to initialize all widgets below
+										You do not need to use widgets if you dont want to. Simply remove
+										the <section></section> and you can use wells or panels instead
+										-->
+						
+										<!-- widget grid -->
+										<section id="widget-grid" class="">
+						
+											<!-- row -->
+											<div class="row">
+						
+												<!-- NEW WIDGET START -->
+												<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">						
+													<table id="valoresFixos"></table>
+													<div id="pgValoresFixo"></div>					
+												</article>
+												<!-- WIDGET END -->
+						
+											</div>
+						
+											<!-- end row -->
+						
+										</section>
+										<!-- end widget grid -->
 
 									</div>
 									<!-- end widget content -->
@@ -955,7 +961,7 @@
 						<article class="col-sm-12 col-md-12 col-lg-6">
 
 							<!-- new widget -->
-							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-31" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-101" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
 
 								<!-- widget options:
 								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
@@ -972,10 +978,9 @@
 								-->
 
 								<header>
-									<span class="widget-icon"> <i class="fa fa-check txt-color-white"></i> </span>
-									<h2>Students</h2>
+									<span class="widget-icon"> <i class="fa fa-dollar txt-color-white"></i> </span>
+									<h2>Lançamentos de valores por periodo</h2>
 									<div class="widget-toolbar">
-										<!-- add: non-hidden - to disable auto hide -->
 									</div>
 								</header>
 
@@ -992,21 +997,31 @@
 									<!-- widget content -->
 									<div class="widget-body no-padding">
 										
-										<table id="student_list" class="display projects-table table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-									        <thead>
-												<tr>
-													<th class="hasinput" >
-													</th>
-													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Filter Student" />
-													</th>
-												</tr>
-									            <tr>
-									                <th></th>
-									                <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>Student</th>
-									            </tr>
-									        </thead>
-									    </table>
+										<!--
+										The ID "widget-grid" will start to initialize all widgets below
+										You do not need to use widgets if you dont want to. Simply remove
+										the <section></section> and you can use wells or panels instead
+										-->
+						
+										<!-- widget grid -->
+										<section id="widget-grid" class="">
+						
+											<!-- row -->
+											<div class="row">
+						
+												<!-- NEW WIDGET START -->
+												<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">						
+													<table id="valoresPeriodicos"></table>
+													<div id="pgValoresPeriodicos"></div>					
+												</article>
+												<!-- WIDGET END -->
+						
+											</div>
+						
+											<!-- end row -->
+						
+										</section>
+										<!-- end widget grid -->
 
 									</div>
 									<!-- end widget content -->
@@ -1021,7 +1036,159 @@
 						<article class="col-sm-12 col-md-12 col-lg-6">
 
 							<!-- new widget -->
-							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-32" data-widget-colorbutton="false">
+							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-102" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+
+								-->
+
+								<header>
+									<span class="widget-icon"> <i class="fa fa-dollar txt-color-white"></i> </span>
+									<h2>Lançamentos de valores mensais</h2>
+									<div class="widget-toolbar">
+										<div class="input-append date" id="mesAnoLancamentoFuncionario" data-date="02-2012" data-date-format="mm-yyyy">
+									</div>
+								</header>
+
+								<!-- widget div-->
+								<div>
+									
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+										<input class="form-control" type="text">	
+									</div>
+									<!-- end widget edit box -->
+									
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										
+										<!--
+										The ID "widget-grid" will start to initialize all widgets below
+										You do not need to use widgets if you dont want to. Simply remove
+										the <section></section> and you can use wells or panels instead
+										-->
+						
+										<!-- widget grid -->
+										<section id="widget-grid" class="">
+						
+											<!-- row -->
+											<div class="row">
+						
+												<!-- NEW WIDGET START -->
+												<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">						
+													<table id="valoresMensais"></table>
+													<div id="pgValoresMensais"></div>					
+												</article>
+												<!-- WIDGET END -->
+						
+											</div>
+						
+											<!-- end row -->
+						
+										</section>
+										<!-- end widget grid -->
+
+									</div>
+									<!-- end widget content -->
+									
+								</div>
+								<!-- end widget div -->
+
+							</div>
+							<!-- end widget -->
+						</article>
+
+						<article class="col-sm-12 col-md-12 col-lg-6">
+
+							<!-- new widget -->
+							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-122" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+
+								-->
+
+								<header>
+									<span class="widget-icon"> <i class="fa fa-dollar txt-color-white"></i> </span>
+									<h2>Lançamentos de funcionários</h2>
+									<div class="widget-toolbar">
+										<div class="input-append date" id="mesAnoLancamentoMensal" data-date="02-2012" data-date-format="mm-yyyy">
+									</div>
+								</header>
+
+								<!-- widget div-->
+								<div>
+									
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+										<input class="form-control" type="text">	
+									</div>
+									<!-- end widget edit box -->
+									
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										
+										<!--
+										The ID "widget-grid" will start to initialize all widgets below
+										You do not need to use widgets if you dont want to. Simply remove
+										the <section></section> and you can use wells or panels instead
+										-->
+						
+										<!-- widget grid -->
+										<section id="widget-grid" class="">
+						
+											<!-- row -->
+											<div class="row">
+						
+												<!-- NEW WIDGET START -->
+												<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">						
+													<table id="valoresFuncionarios"></table>
+													<div id="pgValoresFuncionarios"></div>					
+												</article>
+												<!-- WIDGET END -->
+						
+											</div>
+						
+											<!-- end row -->
+						
+										</section>
+										<!-- end widget grid -->
+
+									</div>
+									<!-- end widget content -->
+									
+								</div>
+								<!-- end widget div -->
+
+							</div>
+							<!-- end widget -->
+						</article>
+
+						<article class="col-sm-12 col-md-12 col-lg-6">
+
+							<!-- new widget -->
+							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-112" data-widget-colorbutton="false">
 
 								<!-- widget options:
 								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
@@ -1038,22 +1205,22 @@
 								-->
 								<header>
 									<span class="widget-icon"> <i class="fa fa-calendar"></i> </span>
-									<h2> My Events </h2>
+									<h2> Calendário Asgard Comércio Ltda </h2>
 									<div class="widget-toolbar">
 										<!-- add: non-hidden - to disable auto hide -->
 										<div class="btn-group">
 											<button class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown">
-												Showing <i class="fa fa-caret-down"></i>
+												Tipo <i class="fa fa-caret-down"></i>
 											</button>
 											<ul class="dropdown-menu js-status-update pull-right">
 												<li>
-													<a href="javascript:void(0);" id="mt">Month</a>
+													<a href="javascript:void(0);" id="mt">Mes</a>
 												</li>
 												<li>
 													<a href="javascript:void(0);" id="ag">Agenda</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);" id="td">Today</a>
+													<a href="javascript:void(0);" id="td">Hoje</a>
 												</li>
 											</ul>
 										</div>
@@ -1097,7 +1264,7 @@
 						<article class="col-sm-12 col-md-12 col-lg-6">
 
 							<!-- new widget -->
-							<div class="jarviswidget" id="wid-id-33" data-widget-colorbutton="false" data-widget-editbutton="false">
+							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-112" data-widget-colorbutton="false">
 
 								<!-- widget options:
 								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
@@ -1112,262 +1279,94 @@
 								data-widget-sortable="false"
 
 								-->
-
 								<header>
-									<span class="widget-icon"> <i class="fa fa-map-marker"></i> </span>
-									<h2>Accommodations around the world</h2>
+									<span class="widget-icon"> <i class="fa fa-calendar"></i> </span>
+									<h2> Tarefas da Asgard Comércio Ltda </h2>
+									<div class="widget-toolbar">
+									</div>
 								</header>
 
 								<!-- widget div-->
 								<div>
 									<!-- widget edit box -->
 									<div class="jarviswidget-editbox">
-										<div>
-											<label>Title:</label>
-											<input type="text" />
-										</div>
+
+										<input class="form-control" type="text">
+
 									</div>
 									<!-- end widget edit box -->
 
 									<div class="widget-body no-padding">
 										<!-- content goes here -->
-
-										<div id="vector-map" class="vector-map"></div>
-										<div id="heat-fill">
-											<span class="fill-a">0</span>
-
-											<span class="fill-b">5,000</span>
-										</div>
-
-										<table class="table table-striped table-hover table-condensed">
-											<thead>
-												<tr>
-													<th>Country</th>
-													<th>Accommodated</th>
-													<th class="text-align-center">Monthly</th>
-													<th class="text-align-center hidden-xs">Waiting accommodation</th>
-													<th class="text-align-center">Accommodation/Student</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td><a href="javascript:void(0);">USA</a></td>
-													<td>232</td>
-													<td class="text-align-center">
-													<div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
-														100, 121, 300, 255, 211, 350, 355, 121, 322, 500, 323, 656, 700
-													</div></td>
-													<td class="text-align-center hidden-xs">143</td>
-													<td class="text-align-center">
-													<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
-														17,83
-													</div>
-												</td>
-												</tr>
-												<tr>
-													<td><a href="javascript:void(0);">Australia</a></td>
-													<td>343</td>
-													<td class="text-align-center">
-													<div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
-														100, 121, 300, 255, 211, 350, 355, 121, 322, 500, 323, 656, 700
-													</div></td>
-													<td class="text-align-center hidden-xs">247</td>
-													<td class="text-align-center">
-													<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
-														22,88
-													</div>
-												</td>
-												</tr>
-												<tr>
-													<td><a href="javascript:void(0);">India</a></td>
-													<td>271</td>
-													<td class="text-align-center">
-													<div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
-														100, 121, 300, 255, 211, 350, 355, 121, 322, 500, 323, 656, 700
-													</div></td>
-													<td class="text-align-center hidden-xs">373</td>
-													<td class="text-align-center">
-													<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
-														10,90
-													</div>
-												</td>
-												</tr>
-												<tr>
-													<td><a href="javascript:void(0);">Brazil</a></td>
-													<td>176</td>
-													<td class="text-align-center">
-													<div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
-														100, 121, 300, 255, 211, 350, 355, 121, 322, 500, 323, 656, 700
-													</div></td>
-													<td class="text-align-center hidden-xs ">741</td>
-													<td class="text-align-center">
-													<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
-														34,66
-													</div>
-												</td>
-												</tr>
-												<tr>
-													<td><a href="javascript:void(0);">Turkey</a></td>
-													<td>176</td>
-													<td class="text-align-center">
-													<div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
-														100, 121, 300, 255, 211, 350, 355, 121, 322, 500, 323, 656, 700
-													</div></td>
-													<td class="text-align-center hidden-xs">123</td>
-													<td class="text-align-center">
-													<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
-														75,25
-													</div>
-												</td>
-												</tr>
-												<tr>
-													<td><a href="javascript:void(0);">Canada</a></td>
-													<td>146</td>
-													<td class="text-align-center">
-													<div class="sparkline txt-color-orange text-align-center" data-sparkline-height="22px" data-sparkline-width="90px" data-sparkline-barwidth="2">
-														100, 121, 300, 255, 211, 350, 355, 121, 322, 500, 323, 656, 700
-													</div></td>
-													<td class="text-align-center hidden-xs">23</td>
-													<td class="text-align-center">
-													<div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]' data-sparkline-offset="90" data-sparkline-piesize="23px">
-														50,50
-													</div>
-													</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan=5>
-													<ul class="pagination pagination-xs no-margin">
-														<li class="prev disabled">
-															<a href="javascript:void(0);">Previous</a>
+										<div class="widget-body-toolbar">
+											<div class="well padding-10">
+												<h5 class="margin-top-0"><i class="fa fa-fire"></i> Tarefas:</h5>
+												<div class="widget-body no-padding smart-form">
+													<!-- content goes here -->
+													<h5 class="todo-group-title"><i class="fa fa-warning"></i> Criticas (<small class="num-of-tasks">1</small>)</h5>
+													<ul id="sortable1" class="todo">
+														<li>
+															<span class="handle"> <label class="checkbox">
+																	<input type="checkbox" name="checkbox-inline">
+																	<i></i> </label> </span>
+															<p>
+																<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
+																<span class="date">Jan 1, 2014</span>
+															</p>
 														</li>
-														<li class="active">
-															<a href="javascript:void(0);">1</a>
+													</ul>
+													<h5 class="todo-group-title"><i class="fa fa-exclamation"></i> Importantes (<small class="num-of-tasks">3</small>)</h5>
+													<ul id="sortable2" class="todo">
+														<li>
+															<span class="handle"> <label class="checkbox">
+																	<input type="checkbox" name="checkbox-inline">
+																	<i></i> </label> </span>
+															<p>
+																<strong>Ticket #1347</strong> - Inbox email is being sent twice <small>(bug fix)</small> [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="date">Nov 22, 2013</span>
+															</p>
 														</li>
 														<li>
-															<a href="javascript:void(0);">2</a>
+															<span class="handle"> <label class="checkbox">
+																	<input type="checkbox" name="checkbox-inline">
+																	<i></i> </label> </span>
+															<p>
+																<strong>Ticket #1314</strong> - Call customer support re: Issue <a href="javascript:void(0);" class="font-xs">#6134</a><small>(code review)</small>
+																<span class="date">Nov 22, 2013</span>
+															</p>
 														</li>
 														<li>
-															<a href="javascript:void(0);">3</a>
+															<span class="handle"> <label class="checkbox">
+																	<input type="checkbox" name="checkbox-inline">
+																	<i></i> </label> </span>
+															<p>
+																<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
+																<span class="date">Jan 1, 2014</span>
+															</p>
 														</li>
-														<li class="next">
-															<a href="javascript:void(0);">Next</a>
+													</ul>
+					
+													<h5 class="todo-group-title"><i class="fa fa-check"></i> Completadas (<small class="num-of-tasks">1</small>)</h5>
+													<ul id="sortable3" class="todo">
+														<li class="complete">
+															<span class="handle" style="display:none"> <label class="checkbox state-disabled">
+																	<input type="checkbox" name="checkbox-inline" checked="checked" disabled="disabled">
+																	<i></i> </label> </span>
+															<p>
+																<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
+																<span class="date">Jan 1, 2014</span>
+															</p>
 														</li>
-													</ul></td>
-												</tr>
-											</tfoot>
-										</table>
-
-										<!-- end content -->
-
-									</div>
-
-								</div>
-								<!-- end widget div -->
-							</div>
-							<!-- end widget -->
-
-							<!-- new widget -->
-							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-34" data-widget-editbutton="false" data-widget-colorbutton="false">
-
-								<!-- widget options:
-								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-								data-widget-colorbutton="false"
-								data-widget-editbutton="false"
-								data-widget-togglebutton="false"
-								data-widget-deletebutton="false"
-								data-widget-fullscreenbutton="false"
-								data-widget-custombutton="false"
-								data-widget-collapsed="true"
-								data-widget-sortable="false"
-
-								-->
-
-								<header>
-									<span class="widget-icon"> <i class="fa fa-check txt-color-white"></i> </span>
-									<h2> ToDo's </h2>
-									<!-- <div class="widget-toolbar">
-									add: non-hidden - to disable auto hide
-
-									</div>-->
-								</header>
-
-								<!-- widget div-->
-								<div>
-									<!-- widget edit box -->
-									<div class="jarviswidget-editbox">
-										<div>
-											<label>Title:</label>
-											<input type="text" />
-										</div>
-									</div>
-									<!-- end widget edit box -->
-
-									<div class="widget-body no-padding smart-form">
-										<!-- content goes here -->
-										<h5 class="todo-group-title"><i class="fa fa-warning"></i> Critical Tasks (<small class="num-of-tasks">1</small>)</h5>
-										<ul id="sortable1" class="todo">
-											<li>
-												<span class="handle"> <label class="checkbox">
-														<input type="checkbox" name="checkbox-inline">
-														<i></i> </label> </span>
-												<p>
-													<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
-													<span class="date">Jan 1, 2014</span>
-												</p>
-											</li>
-										</ul>
-										<h5 class="todo-group-title"><i class="fa fa-exclamation"></i> Important Tasks (<small class="num-of-tasks">3</small>)</h5>
-										<ul id="sortable2" class="todo">
-											<li>
-												<span class="handle"> <label class="checkbox">
-														<input type="checkbox" name="checkbox-inline">
-														<i></i> </label> </span>
-												<p>
-													<strong>Ticket #1347</strong> - Inbox email is being sent twice <small>(bug fix)</small> [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="date">Nov 22, 2013</span>
-												</p>
-											</li>
-											<li>
-												<span class="handle"> <label class="checkbox">
-														<input type="checkbox" name="checkbox-inline">
-														<i></i> </label> </span>
-												<p>
-													<strong>Ticket #1314</strong> - Call customer support re: Issue <a href="javascript:void(0);" class="font-xs">#6134</a><small>(code review)</small>
-													<span class="date">Nov 22, 2013</span>
-												</p>
-											</li>
-											<li>
-												<span class="handle"> <label class="checkbox">
-														<input type="checkbox" name="checkbox-inline">
-														<i></i> </label> </span>
-												<p>
-													<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
-													<span class="date">Jan 1, 2014</span>
-												</p>
-											</li>
-										</ul>
-
-										<h5 class="todo-group-title"><i class="fa fa-check"></i> Completed Tasks (<small class="num-of-tasks">1</small>)</h5>
-										<ul id="sortable3" class="todo">
-											<li class="complete">
-												<span class="handle" style="display:none"> <label class="checkbox state-disabled">
-														<input type="checkbox" name="checkbox-inline" checked="checked" disabled="disabled">
-														<i></i> </label> </span>
-												<p>
-													<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
-													<span class="date">Jan 1, 2014</span>
-												</p>
-											</li>
-										</ul>
+													</ul>
+					
+													<!-- end content -->
+												</div>
+											</div>
 
 										<!-- end content -->
 									</div>
 
 								</div>
 								<!-- end widget div -->
-
 							</div>
 							<!-- end widget -->
 
@@ -1588,12 +1587,434 @@
 		<script src="js/plugin/x-editable/jquery.mockjax.min.js"></script>
 		<script src="js/plugin/x-editable/x-editable.min.js"></script>
 
+		<!-- grid jquery grid -->
+		<script src="js/plugin/jqgrid/jquery.jqGrid.min.js"></script>
+		<script src="js/plugin/jqgrid/grid.locale-en.min.js"></script>
+
+
 		<script>
 			$(document).ready(function() {
 
 				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
 
+
+				//
+				//  Movimenta o mes do calendário
+				//
+
+				$("#mesAnoLancamentoFuncionario").datepicker({
+				        viewMode: 'years',
+				        minViewMode: "months",
+				         format: 'mm-yyyy'
+				    });			
+				$("#mesAnoLancamentoMensal").datepicker({
+			        viewMode: 'years',
+			        minViewMode: "months",
+			         format: 'mm-yyyy'
+			    });			
+			
+				//
+				//  Grid de valore fixos
+				//
+				var valoresFixos_data = [{
+					valoresFixosDescricao : "Vale refeição",
+					valoresFixosValor : "200,00",
+					valoresFixosObservacao : "Vale refeição a ser creditado mensalmente ao funcionário"
+				},{
+					valoresFixosDescricao : "Vale compras",
+					valoresFixosValor : "200,00",
+					valoresFixosObservacao : "Vale compras a ser creditado ao mensalmente funcionário"
+				},{
+					valoresFixosDescricao : "Desconto segura de vida",
+					valoresFixosValor : "200,00",
+					valoresFixosObservacao : "Desconto de seguro de vida a ser descontado mensalmente do funcionário"
+				}];
+				
+				var valoresFixosRow;
+
+				jQuery("#valoresFixos").jqGrid({
+					data : valoresFixos_data,
+					datatype : "local",
+					height : 'auto',
+					colNames : ['Descrição', 'Valor', 'Observação'],
+					colModel : [{
+						name : 'valoresFixosDescricao',
+						index : 'valoresFixosDescricao',
+						width:150,
+						editable: true,
+						edittype:"select",
+						editoptions:{value:"VR:Vale Refeição;VT:Vale Transporte;SG:Seguro Saúde;SV:Seguro de Vida"}
+					}, {
+						name : 'valoresFixosValor',
+						index : 'valoresFixosValor',
+						width:60,
+						align:"right",
+						editable: true
+					}, {
+						name : 'valoresFixosObservacao',
+						index : 'valoresFixosObservacao',
+						width:200,
+						editable: false
+					}],
+					rowNum : 10,
+					rowList : [10, 20, 30],
+					pager : '#pgValoresFixo',
+					sortname : 'valoresFixosDescricao',
+					toolbarfilter : true,
+					viewrecords : true,
+					sortorder : "asc",
+					gridComplete : function() {
+					},
+					onSelectRow: function(id){
+						if(id && id!==valoresFixosRow){
+							jQuery('#valoresFixos').jqGrid('restoreRow',valoresFixosRow);
+							jQuery('#valoresFixos').jqGrid('editRow',id,true);
+							valoresFixosRow=id;
+						}
+					},
+					editurl : "dummy.html",
+					caption : "Valores fixos",
+					multiselect : true,
+					autowidth : true,
+
+				});
+				jQuery("#valoresFixos").jqGrid('navGrid', "#pgValoresFixo", {
+					edit : false,
+					add : false,
+					del : true
+				});
+				jQuery("#valoresFixos").jqGrid('inlineNav', "#pgValoresFixo");
+				/* Add tooltips */
+				$('.navtable .ui-pg-button').tooltip({
+					container : 'body'
+				});
+
+				jQuery("#m1").click(function() {
+					var s;
+					s = jQuery("#valoresFixos").jqGrid('getGridParam', 'selarrrow');
+					alert(s);
+				});
+				jQuery("#m1s").click(function() {
+					jQuery("#valoresFixos").jqGrid('setSelection', "13");
+				});
+
+				//
+				//  Grid de valore periódicos
+				//
+				var valoresPeriodicos_data = [{
+					valoresPeriodicosDescricao : "Vale refeição",
+					valoresPeriodicosValor : "200,00",
+					valoresPeriodicosInicio : "03/2016",
+					valoresPeriodicosFinal : "07/2016"
+				},{
+					valoresPeriodicosDescricao : "Vale compras",
+					valoresPeriodicosValor : "200,00",
+					valoresPeriodicosInicio : "03/2016",
+					valoresPeriodicosFinal : "07/2016"
+				},{
+					valoresPeriodicosDescricao : "Desconto segura de vida",
+					valoresPeriodicosValor : "200,00",
+					valoresPeriodicosInicio : "03/2016",
+					valoresPeriodicosFinal : "07/2016"
+				}];
+				
+				var valoresPeriodicosRow;
+
+				jQuery("#valoresPeriodicos").jqGrid({
+					data : valoresPeriodicos_data,
+					datatype : "local",
+					height : 'auto',
+					colNames : ['Descrição', 'Valor', 'Inicio', 'Final'],
+					colModel : [{
+						name : 'valoresPeriodicosDescricao',
+						index : 'valoresPeriodicosDescricao',
+						width:150,
+						editable: true,
+						edittype:"select",
+						editoptions:{value:"VR:Vale Refeição;VT:Vale Transporte;SG:Seguro Saúde;SV:Seguro de Vida"}
+					}, {
+						name : 'valoresPeriodicosValor',
+						index : 'valoresPeriodicosValor',
+						width:60,
+						align:"right",
+						editable: true
+					}, {
+						name : 'valoresPeriodicosInicio',
+						index : 'valoresPeriodicosInicio',
+						width:60,
+						align:"center",
+						editable: true
+					}, {
+						name : 'valoresPeriodicosFinal',
+						index : 'valoresPeriodicosFinal',
+						width:60,
+						align:"center",
+						editable: true
+					}],
+					rowNum : 10,
+					rowList : [10, 20, 30],
+					pager : '#pgValoresPeriodicos',
+					sortname : 'valoresPeriodicosDescricao',
+					toolbarfilter : true,
+					viewrecords : true,
+					sortorder : "asc",
+					gridComplete : function() {
+					},
+					onSelectRow: function(id){
+						if(id && id!==valoresPeriodicosRow){
+							jQuery('#valoresPeriodicos').jqGrid('restoreRow',valoresPeriodicosRow);
+							jQuery('#valoresPeriodicos').jqGrid('editRow',id,true);
+							valoresPeriodicosRow=id;
+						}
+					},
+					editurl : "dummy.html",
+					caption : "Valores Periódicos",
+					multiselect : true,
+					autowidth : true,
+
+				});
+				jQuery("#valoresPeriodicos").jqGrid('navGrid', "#pgValoresPeriodicos", {
+					edit : false,
+					add : false,
+					del : true
+				});
+				jQuery("#valoresPeriodicos").jqGrid('inlineNav', "#pgValoresPeriodicos");
+				/* Add tooltips */
+				$('.navtable .ui-pg-button').tooltip({
+					container : 'body'
+				});
+
+				jQuery("#m1").click(function() {
+					var s;
+					s = jQuery("#valoresPeriodicos").jqGrid('getGridParam', 'selarrrow');
+					alert(s);
+				});
+				jQuery("#m1s").click(function() {
+					jQuery("#valoresPeriodicos").jqGrid('setSelection', "13");
+				});
+
+				//
+				//  Grid de valores mensais
+				//
+				var valoresMensais_data = [{
+					valoresMensaisDescricao : "Vale refeição",
+					valoresMensaisValor : "200,00",
+					valoresMensaisObservacao : "Vale refeição a ser creditado mensalmente ao funcionário"
+				},{
+					valoresMensaisDescricao : "Vale compras",
+					valoresMensaisValor : "200,00",
+					valoresMensaisObservacao : "Vale compras a ser creditado ao mensalmente funcionário"
+				},{
+					valoresMensaisDescricao : "Desconto segura de vida",
+					valoresMensaisValor : "200,00",
+					valoresMensaisObservacao : "Desconto de seguro de vida a ser descontado mensalmente do funcionário"
+				}];
+				
+				var valoresMensaisRow;
+
+				jQuery("#valoresMensais").jqGrid({
+					data : valoresMensais_data,
+					datatype : "local",
+					height : 'auto',
+					colNames : ['Descrição', 'Valor', 'Observação'],
+					colModel : [{
+						name : 'valoresMensaisDescricao',
+						index : 'valoresMensaisDescricao',
+						width:150,
+						editable: true,
+						edittype:"select",
+						editoptions:{value:"VR:Vale Refeição;VT:Vale Transporte;SG:Seguro Saúde;SV:Seguro de Vida"}
+					}, {
+						name : 'valoresMensaisValor',
+						index : 'valoresMensaisValor',
+						width:60,
+						align:"right",
+						editable: true
+					}, {
+						name : 'valoresMensaisObservacao',
+						index : 'valoresMensaisObservacao',
+						width:200,
+						editable: false
+					}],
+					rowNum : 10,
+					rowList : [10, 20, 30],
+					pager : '#pgValoresMensais',
+					sortname : 'valoresMensaisDescricao',
+					toolbarfilter : true,
+					viewrecords : true,
+					sortorder : "asc",
+					gridComplete : function() {
+					},
+					onSelectRow: function(id){
+						if(id && id!==valoresMensaisRow){
+							jQuery('#valoresMensais').jqGrid('restoreRow',valoresMensaisRow);
+							jQuery('#valoresMensais').jqGrid('editRow',id,true);
+							valoresMensaisRow=id;
+						}
+					},
+					editurl : "dummy.html",
+					caption : "Valores Mensais",
+					multiselect : true,
+					autowidth : true,
+
+				});
+				jQuery("#valoresMensais").jqGrid('navGrid', "#pgValoresMensais", {
+					edit : false,
+					add : false,
+					del : true
+				});
+				jQuery("#valoresMensais").jqGrid('inlineNav', "#pgValoresMensais");
+				/* Add tooltips */
+				$('.navtable .ui-pg-button').tooltip({
+					container : 'body'
+				});
+
+				jQuery("#m1").click(function() {
+					var s;
+					s = jQuery("#valoresMensais").jqGrid('getGridParam', 'selarrrow');
+					alert(s);
+				});
+				jQuery("#m1s").click(function() {
+					jQuery("#valoresMensais").jqGrid('setSelection', "13");
+				});
+
+
+				//
+				//  Grid de valores por funcionário
+				//
+				var valoresFuncionarios_data = [{
+					valoresFuncionariosFuncionario : "Jõao Alves de Lima",
+					valoresFuncionariosDescricao : "Vale refeição",
+					valoresFuncionariosValor : "200,00"
+				},{
+					valoresFuncionariosFuncionario : "Antonio Jose Medeiros",
+					valoresFuncionariosDescricao : "Vale compras",
+					valoresFuncionariosValor : "200,00"
+				},{
+					valoresFuncionariosFuncionario : "Luiza Francisco Souza",
+					valoresFuncionariosDescricao : "Desconto segura de vida",
+					valoresFuncionariosValor : "200,00"
+				}];
+				
+				var valoresFuncionariosRow;
+
+				jQuery("#valoresFuncionarios").jqGrid({
+					data : valoresFuncionarios_data,
+					datatype : "local",
+					height : 'auto',
+					colNames : ['Funcionário','Descrição', 'Valor'],
+					colModel : [{
+						name : 'valoresFuncionariosFuncionario',
+						index : 'valoresFuncionariosFuncionario',
+						width:200,
+						editable: true,
+						edittype:"select",
+						editoptions:{
+							value:
+								"001:Antonio Jose Medeiros;" +
+								"002:Luiza Francisco Souza;" +
+								"003:Jõao Alves de Lima;" +
+								"004:Franciso Alves;" +
+								"005:Maria de Oliveira;" +
+								"006:Marta Antonio Silva;" +
+								"007:Mario Lima;" +
+								"008:Luiz Jorge;"
+							}
+					}, {
+						name : 'valoresFuncionariosDescricao',
+						index : 'valoresFuncionariosDescricao',
+						width:150,
+						editable: true,
+						edittype:"select",
+						editoptions:{value:"VR:Vale Refeição;VT:Vale Transporte;SG:Seguro Saúde;SV:Seguro de Vida"}
+					}, {
+						name : 'valoresFuncionariosValor',
+						index : 'valoresFuncionariosValor',
+						width:60,
+						align:"right",
+						editable: true
+					}],
+					rowNum : 10,
+					rowList : [10, 20, 30],
+					pager : '#pgValoresFuncionarios',
+					sortname : 'valoresFuncionariosDescricao',
+					toolbarfilter : true,
+					viewrecords : true,
+					sortorder : "asc",
+					gridComplete : function() {
+					},
+					onSelectRow: function(id){
+						if(id && id!==valoresFuncionariosRow){
+							jQuery('#valoresFuncionarios').jqGrid('restoreRow',valoresFuncionariosRow);
+							jQuery('#valoresFuncionarios').jqGrid('editRow',id,true);
+							valoresFuncionariosRow=id;
+						}
+					},
+					editurl : "dummy.html",
+					caption : "Valores Funcionarios",
+					multiselect : true,
+					autowidth : true,
+
+				});
+				jQuery("#valoresFuncionarios").jqGrid('navGrid', "#pgValoresFuncionarios", {
+					edit : false,
+					add : false,
+					del : true
+				});
+				jQuery("#valoresFuncionarios").jqGrid('inlineNav', "#pgValoresFuncionarios");
+				/* Add tooltips */
+				$('.navtable .ui-pg-button').tooltip({
+					container : 'body'
+				});
+
+				jQuery("#m1").click(function() {
+					var s;
+					s = jQuery("#valoresFuncionarios").jqGrid('getGridParam', 'selarrrow');
+					alert(s);
+				});
+				jQuery("#m1s").click(function() {
+					jQuery("#valoresFuncionarios").jqGrid('setSelection', "13");
+				});
+			
+				// remove classes
+				$(".ui-jqgrid").removeClass("ui-widget ui-widget-content");
+				$(".ui-jqgrid-view").children().removeClass("ui-widget-header ui-state-default");
+				$(".ui-jqgrid-labels, .ui-search-toolbar").children().removeClass("ui-state-default ui-th-column ui-th-ltr");
+				$(".ui-jqgrid-pager").removeClass("ui-state-default");
+				$(".ui-jqgrid").removeClass("ui-widget-content");
+
+				// add classes
+				$(".ui-jqgrid-htable").addClass("table table-bordered table-hover");
+				$(".ui-jqgrid-btable").addClass("table table-bordered table-striped");
+				
+				/*	
+				$(".ui-pg-div").removeClass().addClass("btn btn-sm btn-primary");
+				$(".ui-icon.ui-icon-plus").removeClass().addClass("fa fa-plus");
+				$(".ui-icon.ui-icon-pencil").removeClass().addClass("fa fa-pencil");
+				$(".ui-icon.ui-icon-trash").removeClass().addClass("fa fa-trash-o");
+				$(".ui-icon.ui-icon-search").removeClass().addClass("fa fa-search");
+				$(".ui-icon.ui-icon-refresh").removeClass().addClass("fa fa-refresh");
+				$(".ui-icon.ui-icon-disk").removeClass().addClass("fa fa-save").parent(".btn-primary").removeClass("btn-primary").addClass("btn-success");
+				$(".ui-icon.ui-icon-cancel").removeClass().addClass("fa fa-times").parent(".btn-primary").removeClass("btn-primary").addClass("btn-danger");
+
+				$(".ui-icon.ui-icon-seek-prev").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-prev").removeClass().addClass("fa fa-backward");
+
+				$(".ui-icon.ui-icon-seek-first").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-first").removeClass().addClass("fa fa-fast-backward");
+
+				$(".ui-icon.ui-icon-seek-next").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-next").removeClass().addClass("fa fa-forward");
+
+				$(".ui-icon.ui-icon-seek-end").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-end").removeClass().addClass("fa fa-fast-forward");
+
+*/
+				
+				
+				
+				/* montagem do grid de laçamentos de verbas
 				/*
 				 * carrega logo
 				 */		
@@ -2191,53 +2612,42 @@
 						},
 
 						events : [{
-							title : 'All Day Event',
-							start : new Date(y, m, 1),
+							id : 001,
+							title : 'Envio Sefip',
+							start : new Date(y, m, 7),
 							description : 'long description',
 							className : ["event", "bg-color-greenLight"],
 							icon : 'fa-check'
 						}, {
-							title : 'Long Event',
-							start : new Date(y, m, d - 5),
-							end : new Date(y, m, d - 2),
+							id : 002,
+							title : 'Fechamento do ponto',
+							start : new Date(y, m, 13),
+							end : new Date(y, m, 19),
+							allDay : true,
 							className : ["event", "bg-color-red"],
 							icon : 'fa-lock'
 						}, {
-							id : 999,
-							title : 'Repeating Event',
-							start : new Date(y, m, d - 3, 16, 0),
-							allDay : false,
+							id : 003,
+							title : 'Limite recebimento dados da folha',
+							start : new Date(y, m, 18),
+							allDay : true,
 							className : ["event", "bg-color-blue"],
 							icon : 'fa-clock-o'
 						}, {
-							id : 999,
-							title : 'Repeating Event',
-							start : new Date(y, m, d + 4, 16, 0),
-							allDay : false,
-							className : ["event", "bg-color-blue"],
-							icon : 'fa-clock-o'
-						}, {
-							title : 'Meeting',
-							start : new Date(y, m, d, 10, 30),
-							allDay : false,
-							className : ["event", "bg-color-darken"]
-						}, {
-							title : 'Lunch',
-							start : new Date(y, m, d, 12, 0),
-							end : new Date(y, m, d, 14, 0),
-							allDay : false,
-							className : ["event", "bg-color-darken"]
-						}, {
-							title : 'Birthday Party',
-							start : new Date(y, m, d + 1, 19, 0),
-							end : new Date(y, m, d + 1, 22, 30),
-							allDay : false,
-							className : ["event", "bg-color-darken"]
-						}, {
-							title : 'Smartadmin Open Day',
+							id : 004,
+							title : 'Cálculo da folha',
 							start : new Date(y, m, 28),
-							end : new Date(y, m, 29),
-							className : ["event", "bg-color-darken"]
+							end : new Date(y, m, 30),
+							allDay : true,
+							className : ["event", "bg-color-darken"],
+							icon : 'fa-clock-o'
+						}, {
+							id : 005,
+							title : 'Depósito Bancário]',
+							start : new Date(y, m, 30),
+							allDay : true,
+							className : ["event", "bg-color-red"],
+							icon : 'fa-lock'
 						}],
 
 						eventRender : function(event, element, icon) {
@@ -2252,10 +2662,6 @@
 
 				};
 
-				// control modal
-				$("#modal_family").click(function(){
-			        $("#accommodation").modal('hide');
-			    });	
 				
 				// setup graph
 				$('table.highchart').highchartTable();

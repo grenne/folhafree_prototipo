@@ -106,14 +106,14 @@
 	<body class="smart-style-3">
 
   <!-- Modal Empresa-->
-  <div class="modal fade" id="incluiempresa_dialog" role="dialog">
+  <div class="modal fade" id="incluifuncionario_dialog" role="dialog">
     <div class="modal-dialog modal-lg">
     
       <!-- Modal content-->
       <div class="modal-content animated flipInY">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Digite os dados da empresa</h4>
+          <h4 class="modal-title">Inclusão</h4>
         </div>
         <div class="modal-body">
 
@@ -122,7 +122,7 @@
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-4">
-						<form action="upload.php" class="dropzone" id="logoempresa"></form>
+						<form action="upload.php" class="dropzone" id="fotofuncionario"></form>
 				</div>
 				<div class="col-sm-4"></div>
 				<br><br>
@@ -130,7 +130,7 @@
 			</article>
 			
 			<!-- Widget ID (each widget will need unique ID)-->
-			<div class="jarviswidget" id="wid-id-3" data-widget-editbutton="false" data-widget-custombutton="false">
+			<div class="jarviswidget" id="wid-id-303" data-widget-editbutton="false" data-widget-custombutton="false">
 				<!-- widget options:
 					usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 					
@@ -146,7 +146,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-edit"></i> </span>
-					<h2>Dados da empresa</h2>				
+					<h2>Dados da funcionário</h2>				
 					
 				</header>
 
@@ -162,160 +162,447 @@
 					
 					<!-- widget content -->
 					<div class="widget-body no-padding">
-						
-						<form id="order-form" class="smart-form" novalidate="novalidate">
-							<header>
-								Contato
-							</header>
-
-							<fieldset>
-								<div class="row">
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa fa-user"></i>
-											<input type="text" name="namecontato" placeholder="Name">
-										</label>
-									</section>
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa fa-phone"></i>
-											<input type="mobilephonr" name="celularcontato" placeholder="Mobile Phone" data-mask="(999) 99999-9999">
-										</label>
-									</section>
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-											<input type="email" name="emailcontato" placeholder="E-mail">
-										</label>
-									</section>
-								</div>
-							</fieldset>
-
-							<header>
-								Empresa
-							</header>
-
-							<fieldset>
-								<div class="row">
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa  fa-institution"></i>
-											<input type="text" name="nameempresa" placeholder="Name Empresa">
-										</label>
-									</section>
-									<section class="col col-4">
-										<label class="input"> <i class="icon-append fa fa-map-marker"></i>
-											<input type="text" name="enderecoempresa" placeholder="Endereço(Rua. Av)" >
-										</label>
-									</section>
-									<section class="col col-2">
-										<label class="input"> <i class="icon-append fa fa-map-marker"></i>
-											<input type="text" name="numeroenderecoempresa" placeholder="Numero" data-mask="999.999">
-										</label>
-									</section>
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa  fa-map-marker"></i>
-											<input type="text" name="bairroenredecoempresa" placeholder="Bairro">
-										</label>
-									</section>
-									<section class="col col-4">
-										<div class="form-group">
-											<div class="col-md-12">
-												<input class="form-control" placeholder="digite parte da cidade ..." type="text"  list="cidades">
-												<datalist id="cidades">
-													<option value="São Paulo">São Paulo</option>
-													<option value="Campinas">Campinas</option>
-													<option value="Zambia">Zambia</option>
-												</datalist>
-											</div>
+						<!-- NEW WIDGET START -->
+						<article class="col-sm-12 col-md-12 col-lg-12">
+				
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+				
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+				
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-check"></i> </span>
+									<h2>Wizard</h2>
+				
+								</header>
+				
+								<!-- widget div-->
+								<div>
+				
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+				
+									</div>
+									<!-- end widget edit box -->
+				
+									<!-- widget content -->
+									<div class="widget-body">
+				
+										<div class="row">
+											<form id="wizard-1" novalidate="novalidate">
+												<div id="bootstrap-wizard-1" class="col-sm-12">
+													<div class="form-bootstrapWizard">
+														<ul class="bootstrapWizard form-wizard">
+															<li class="active" data-target="#step1">
+																<a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">Verificação</span> </a>
+															</li>
+															<li data-target="#step2">
+																<a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">Dados Pessoais</span> </a>
+															</li>
+															<li data-target="#step3">
+																<a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">Endereço</span> </a>
+															</li>
+															<li data-target="#step4">
+																<a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">Documentos</span> </a>
+															</li>
+															<li data-target="#step5">
+																<a href="#tab5" data-toggle="tab"> <span class="step">5</span> <span class="title">Dados Empresa</span> </a>
+															</li>
+															<li data-target="#step6">
+																<a href="#tab6" data-toggle="tab"> <span class="step">6</span> <span class="title">Incluir</span> </a>
+															</li>
+														</ul>
+														<div class="clearfix"></div>
+													</div>
+													<div class="tab-content">
+														<div class="tab-pane active" id="tab1">
+															<br>
+															<h3><strong>Passo 0</strong> - Verificação</h3>
+				
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-file-archive-o fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="CPF" type="text" name="CPF" id="cpf">
+				
+																		</div>
+																	</div>
+				
+																</div>
+															</div>
+														</div>
+														<div class="tab-pane " id="tab2">
+															<br>
+															<h3><strong>Passo 1 </strong> - Dados Pessoais</h3>
+				
+															<div class="row">
+				
+																<div class="col-sm-8">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Nome" type="text" name="nome" id="nome">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-4">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Apelido" type="text" name="apelido" id="apelido">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Nome do pai" type="text" name="nomepai" id="nomepai">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Nome mãe" type="text" name="nomemae" id="nomemae">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-phone fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" data-mask="(999) 99999-9999" placeholder= "Telefone"  type="text" name="celular" id="celular">
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-mobile fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" data-mask="(999) 9999-9999" placeholder= "Celular"  type="text" name="telefone" id="telefone">
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="email@dominio.com" type="text" name="emailfun" id="emailfun">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-calendar fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Nascimento" data-provide="datepicker" type="text" name="nascimento" id="nascimento">
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="cidade">
+																				<option value="" selected="selected">Sexo</option>
+																				<option>Masculino</option>
+																				<option>Feminino</option>
+																				<option>Rio deJaneiro</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="estadocivil">
+																				<option value="" selected="selected">Estado Civil</option>
+																				<option>Solteiro</option>
+																				<option>Casado</option>
+																				<option>Divorciado</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="instrucao">
+																				<option value="" selected="selected">Instrução Civil</option>
+																				<option>Analfabeto</option>
+																				<option>Fundamental incompleto</option>
+																				<option>Fundamental completo</option>
+																				<option>Elementar incompleto</option>
+																				<option>Elementar completo</option>
+																				<option>Superior incompleto</option>
+																				<option>Superior completo</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="raca">
+																				<option value="" selected="selected">Raça</option>
+																				<option>Branco</option>
+																				<option>Negro</option>
+																				<option>Mulato</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+				
+				
+															</div>
+				
+														</div>
+														<div class="tab-pane" id="tab3">
+															<br>
+															<h3><strong>Passo 2</strong> - Endereço</h3>
+																<div class="col-sm-3">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="CEP" type="text" name="CEP" id="cep">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Endereço" type="text" name="Endereço" id="endereco">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-3">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Numero" type="text" name="numero" id="numero">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Bairro" type="text" name="bairro" id="bairro">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Complemento" type="text" name="complemento" id="complemento">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="cidade">
+																				<option value="" selected="selected">Cidade</option>
+																				<option>São Paulo</option>
+																				<option>Maringá</option>
+																				<option>Rio deJaneiro</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="pais">
+																				<option value="" selected="selected">Pais</option>
+																				<option>Brasil</option>
+																				<option>Peru</option>
+																				<option>Colombia</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+														</div>
+														<div class="tab-pane" id="tab4">
+															<br>
+															<h3><strong>Passo 3</strong> - Documentos</h3>
+				
+															<div class="row">
+																<div class="col-sm-4">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-file-archive-o fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="RG" type="text" name="rg" id="rg">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-4">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-file-archive-o fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Titulo eleitor" type="text" name="tituloeleitor" id="tituloeleitor">
+				
+																		</div>
+																	</div>
+				
+																</div>
+															</div>
+														</div>
+														<div class="tab-pane" id="tab5">
+															<br>
+															<h3><strong>Passo 4</strong> - Dados Empresa</h3>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-institution fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="pais">
+																				<option value="" selected="selected">Cargo</option>
+																				<option>Analista RH</option>
+																				<option>Operador</option>
+																				<option>Supervisor</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-4">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-dollar fa-lg fa-fw"></i></span>
+																			<input class="form-control input-lg" placeholder="Salário" type="text" name="salario" id="salario">
+				
+																		</div>
+																	</div>
+				
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-institution fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="pais">
+																				<option value="" selected="selected">Hierarquia</option>
+																				<option>Diretoria RH</option>
+																				<option>TI</option>
+																				<option>Infra</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-institution fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="pais">
+																				<option value="" selected="selected">Tipo</option>
+																				<option>Horista</option>
+																				<option>Mensalista</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<div class="input-group">
+																			<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+																			<select class="form-control input-lg" name="pais">
+																				<option value="" selected="selected">Centro de Custo</option>
+																				<option>RH</option>
+																				<option>TI</option>
+																				<option>Infra</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+														</div>
+														<div class="tab-pane" id="tab6">
+															<br>
+															<h3><strong>Passo 5</strong> - Incluir funcionário</h3>
+															<br>
+															<h1 class="text-center text-success"><strong><i class="fa fa-check fa-lg"></i> Terminado</strong></h1>
+															<h4 class="text-center">Click next para encerrar</h4>
+															<br>
+															<br>
+														</div>
+				
+														<div class="form-actions">
+															<div class="row">
+																<div class="col-sm-12">
+																	<ul class="pager wizard no-margin">
+																		<!--<li class="previous first disabled">
+																		<a href="javascript:void(0);" class="btn btn-lg btn-default"> First </a>
+																		</li>-->
+																		<li class="previous disabled">
+																			<a href="javascript:void(0);" class="btn btn-lg btn-default"> Previous </a>
+																		</li>
+																		<!--<li class="next last">
+																		<a href="javascript:void(0);" class="btn btn-lg btn-primary"> Last </a>
+																		</li>-->
+																		<li class="next">
+																			<a href="javascript:void(0);" class="btn btn-lg txt-color-darken"> Next </a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+				
+													</div>
+												</div>
+											</form>
 										</div>
-									</section>
-									<section class="col col-2">
-										<div class="form-group">
-											<div class="col-md-12">
-												<input class="form-control" placeholder="estado..." type="text"  list="estados">
-												<datalist id="estados">
-													<option value="SP">SP</option>
-													<option value="GO">GO</option>
-													<option value="RJ">RJ</option>
-												</datalist>
-											</div>
-										</div>
-									</section>
-									<section class="col col-6">
-										<div class="form-group">
-											<div class="col-md-12">
-												<input class="form-control" placeholder="país..." type="text"  list="paises">
-												<datalist id="paises">
-													<option value="Brazil">Brazil</option>
-													<option value="Angola">Angola</option>
-													<option value="Zambia">Zambia</option>
-												</datalist>
-											</div>
-										</div>
-									</section>
-									<section class="col col-6">
-										<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-											<input type="email" name="email" placeholder="E-mail">
-										</label>
-									</section>
+				
+									</div>
+									<!-- end widget content -->
+				
 								</div>
-							</fieldset>
-
-							<header>
-								Registros
-							</header>
-
-							<fieldset>
-								<div class="row">
-									<section class="col col-4">
-										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
-											<input type="text" name="cnpjempresa" placeholder="CNPJ">
-										</label>
-									</section>
-									<section class="col col-4">
-										<label class="input"> <i class="icon-append fa fa-file-text"></i>
-											<input type="text" name="inscricaoestadualempresa" placeholder="Inscrição Estadual" >
-										</label>
-									</section>
-									<section class="col col-4">
-										<label class="input"> <i class="icon-append fa fa-file-text"></i>
-											<input type="text" name="ceiempresa" placeholder="C.E.I.">
-										</label>
-									</section>
-									<section class="col col-4">
-										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
-											<input type="text" name="cpfempresa" placeholder="C.P.F.">
-										</label>
-									</section>
-									<section class="col col-4">
-										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
-											<input type="text" name="naturezaempresa" placeholder="Natureza">
-										</label>
-									</section>
-									<section class="col col-4">
-										<label class="input"> <i class="icon-append fa  fa-file-text"></i>
-											<input type="text" name="atividadeempresa" placeholder="Ativ. Economica">
-										</label>
-									</section>
-								</div>
-							</fieldset>
-
-							<header>
-								Observações
-							</header>
-							<fieldset>
-								<section>
-									<label class="textarea"> <i class="icon-append fa fa-comment"></i> 										
-										<textarea rows="5" name="comment" placeholder="Observações"></textarea> 
-									</label>
-								</section>
-							</fieldset>
-							<footer>
-								<button type="submit" class="btn btn-primary">
-									Incluir
-								</button>
-								<button type="submit" class="btn btn-primary">
-									Desistir
-								</button>
-							</footer>
-						</form>
+								<!-- end widget div -->
+				
+							</div>
+							<!-- end widget -->
+				
+						</article>
+						<!-- WIDGET END -->
 
 					</div>
 					<!-- end widget content -->
@@ -581,10 +868,10 @@
 							<li class="">
 								<a href="index.html" title="Dashboard"><span class="menu-item-parent">Home</span></a>
 							</li>
-							<li class="active">
+							<li class="">
 								<a href="empresa.html" title="Dashboard"><span class="menu-item-parent">Empresas</span></a>
 							</li>
-							<li class="">
+							<li class="active">
 								<a href="funcionario.html" title="Dashboard"><span class="menu-item-parent">Funcionários</span></a>
 							</li>
 							<li class="">
@@ -622,7 +909,7 @@
 				</span>
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-					<li>Empresa</li>
+					<li>Funcionário</li>
 				</ol>
 				<!-- end breadcrumb -->
 
@@ -647,7 +934,7 @@
 				<section id="widget-grid" class="">
 
 
-					<!-- search empresas -->
+					<!-- search funcionarios -->
 					<!-- row -->
 	
 					<div class="row">
@@ -655,17 +942,13 @@
 						<div class="col-sm-4">
 							<!-- input: search field -->
 							<form action="search.html" class="header-search pull-right">
-								<input id="search-fld"  type="text" name="param" placeholder="Empresa" data-autocomplete='[
-								"Comercio de Embalagens Ltda",
-								"Panificadora Marmel",
-								"Panificadora Olha de Aguia",
-								"Farmacia Tres Rios",
-								"Sapataria do Lago",
-								"Pães e Doces Gabriela",
-								"Marcenaria Tres R",
-								"Sitio Cobra Dagua",
-								"Asgard Comércio Ltda",
-								"Sofia Costureiras"]'>
+								<input id="search-fld"  type="text" name="param" placeholder="Funcionário" data-autocomplete='[
+								"Amanda Ferreira",
+								"Jorge Altages",
+								"Jussara Silva",
+								"Nadia Posstar",
+								"Paulo Xavier",
+								"Sung Tok Num"]'>
 								<button type="submit">
 									<i class="fa fa-search"></i>
 								</button>
@@ -673,7 +956,7 @@
 							</form>
 							<!-- end input: search field -->
 							<div class="col-sm-1 profile-pic">
-								<a data-toggle='modal' data-target='#incluiempresa_dialog' class="glyphicon glyphicon-plus"></a>
+								<a data-toggle='modal' data-target='#incluifuncionario_dialog' class="glyphicon glyphicon-plus"></a>
 							</div>
 						</div>
 					</div>
@@ -700,19 +983,18 @@
 															<div class="col-sm-12">				
 																<div class="row">
 																	<div class="col-sm-3 profile-pic">
-																		<img src="img/folhafree/empresa_02.jpg" alt="Asgard Comercio Ltda">
+																		<img src="img/avatars/photo_2.png" alt="Amanda Ferreira">
 																	</div>
 							
 																	<div class="col-sm-9">
-																		<h1><span class="semi-bold">Asgard Comercio Ltda</span>
+																		<h1><span class="semi-bold">Amanda Ferreira</span>
 																		<br>
 																		<small>Contato</small></h1>
 							
 																		<ul class="list-unstyled">
 																			<li>
 																				<p class="text-muted">
-																			      	
-																					<i class="fa fa-user"></i>&nbsp;&nbsp;<span class="txt-color-darken"><a href="form-x-editable.html#" id="nomecontato" data-type="text" data-pk="1" data-original-title="Nome empresa"></a></span>
+																					<i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;<span class="txt-color-darken"><a href="form-x-editable.html#" id="celularcontato" data-type="text" data-pk="1" data-original-title="Celular"></a></span>
 																				</p>
 																			</li>
 																			<li>
@@ -732,37 +1014,56 @@
 																	<div class="col-xs-3">
 
 																	    <address>
-																	      	<a href="form-x-editable.html#" id="nomeempresa" data-type="text" data-pk="1" data-original-title="Nome empresa"></a><br>
-																	        <a href="form-x-editable.html#" id="enderecoempresa" data-type="address" data-pk="1" data-original-title="Digite o endereço"></a><br>
-																	      	<small>Complemento:</small><a href="form-x-editable.html#" id="complementoenderecoempresa" data-type="text" data-pk="1" data-original-title="Complemento endereço" data-placeholder="Complemento"></a><br>
-																	        <a href="form-x-editable.html#" id="cidadeenderecoempresa" data-type="select2" data-pk="1" data-select-search="true" data-value="São Paulo" data-original-title="Escolha a cidade"></a>, 
-																	        <a href="form-x-editable.html#" id="estadoenderecoempresa" data-type="select2" data-pk="1" data-select-search="true" data-value="SP" data-original-title="Escolha o estado"></a> -  
-																	        <a href="form-x-editable.html#" id="paisenderecoempresa" data-type="select2" data-pk="1" data-select-search="true" data-value="Brasil" data-original-title="Escolha o pais"></a>
-																	         - CEP <a href="form-x-editable.html#" id="cependerecoempresa" data-type="text" data-pk="1" data-original-title="CEP"></a><br>
-																	        <abbr title="Telefone">Tel.</abbr><a href="form-x-editable.html#" id="telefoneempresa" data-type="text" data-pk="1" data-original-title="Telefone"></a><br>
-																	        <strong>E-mail</strong><br>
-																	        <a href="form-x-editable.html#" id="emailempresa" data-type="text" data-pk="1" data-original-title="Email"></a><br>
+																	      	<a href="form-x-editable.html#" id="nomefuncionario" data-type="text" data-pk="1" data-original-title="Nome"></a><br>
+																	        <a href="form-x-editable.html#" id="enderecofuncionario" data-type="address" data-pk="1" data-original-title="Digite o endereço"></a><br>
+																	      	<small>Complemento:</small><a href="form-x-editable.html#" id="complementoenderecofuncionario" data-type="text" data-pk="1" data-original-title="Complemento endereço" data-placeholder="Complemento"></a><br>
+																	        <a href="form-x-editable.html#" id="cidadeenderecofuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="São Paulo" data-original-title="Escolha a cidade"></a>, 
+																	        <a href="form-x-editable.html#" id="estadoenderecofuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="SP" data-original-title="Escolha o estado"></a> -  
+																	        <a href="form-x-editable.html#" id="paisenderecofuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="Brasil" data-original-title="Escolha o pais"></a>
+																	         - CEP <a href="form-x-editable.html#" id="cependerecofuncionario" data-type="text" data-pk="1" data-original-title="CEP"></a><br>
 																	        
 																	    </address>
 																	</div>
 																	<div class="col-xs-2">
+
 																	    <address>
-																	        <strong>CNPJ</strong><br>
-  																	      	<a href="form-x-editable.html#" id="cnpjempresa" data-type="text" data-pk="1" data-original-title="CNPJ"></a><br>
-																	        <strong>Inscrição Estadual</strong><br>
-																	        <a href="form-x-editable.html#" id="inscricaoestadualempresa" data-type="text" data-pk="1" data-original-title="Inscrição Estadual"></a><br>
-																	        <strong>C.E.I.</strong><br>
-																	        <a href="form-x-editable.html#" id="ceiempresa" data-type="text" data-pk="1" data-original-title="EI"></a><br>
-																	        <strong>C.P.F.</strong><br>
-																	        <a href="form-x-editable.html#" id="cpfempresa" data-type="text" data-pk="1" data-original-title="CPF"></a><br>
+																	      	<small>Registro:</small>
+																	      	<a href="form-x-editable.html#" id="refuncionario" data-type="text" data-pk="1" data-original-title="Registro"></a><br>
+																	      	<small>Admissão:</small>
+																	      	<a href="#" id="dataadmissaofuncionario" data-type="date" data-viewformat="dd.mm.yyyy" data-pk="1" data-value="23/05/2003" data-placement="right" data-original-title="Data de Admissao">23/06/2006</a><br>
+																	      	<small>Horas mensais:</small>
+																	        <a href="form-x-editable.html#" id="horasmensais" data-type="text" data-pk="1" data-original-title="Horas Mensais"></a><br>
+																	        <small>Horas semanais:</small>
+																	        <a href="form-x-editable.html#" id="horassemanais" data-type="text" data-pk="1" data-original-title="Horas Semanais"></a><br>
+																	        
 																	    </address>
 																	</div>
 																	<div class="col-xs-3">
+
 																	    <address>
-																	        <strong>Natureza</strong><br>
-																	        <a href="form-x-editable.html#" id="naturezaempresa" data-type="text" data-pk="1" data-original-title="Natureza"></a><br>
-																	        <strong>Atividade Economica</strong><br>
-																	        <a href="form-x-editable.html#" id="atividadeempresa" data-type="text" data-pk="1" data-original-title="Atividade Economica"></a><br>
+																	      	<small>Cargo:</small>
+																	      	<a href="form-x-editable.html#" id="cargofuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="001" data-original-title="Cargo"></a><br>
+																	      	<small>Tipo:</small>
+																	      	<a href="form-x-editable.html#" id="tipofuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="ME" data-original-title="Tipo de Funcionário"></a><br>
+																	        <small>Salario:</small>
+																	        <a href="form-x-editable.html#" id="salariofuncionario" data-type="text" data-pk="1" data-original-title="Salário"></a><br>
+																	      	<small>Centro de Custo:</small>
+																	      	<a href="form-x-editable.html#" id="centrocustofuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="0500A" data-original-title="Centro de Custo"></a><br>
+																	        
+																	    </address>
+																	</div>
+																	<div class="col-xs-3">
+
+																	    <address>
+																	        <small>Primeiro Emprego</small>
+																	        <a href="form-x-editable.html#" id="primeiroemprego" data-type="checklist" data-value="2,3" data-original-title="Primeiro Emprego"></a><br>
+																	      	<small>Mão de Obra:</small>
+																	      	<a href="form-x-editable.html#" id="maoobrafuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="DI" data-original-title="Mão de Obra"></a><br>
+																	      	<small>Sindicato:</small>
+																	      	<a href="form-x-editable.html#" id="sindicatofuncionario" data-type="select2" data-pk="1" data-select-search="true" data-value="001" data-original-title="Sindicato"></a><br>
+																	      	<small>Turno:</small>
+																	        <a href="form-x-editable.html#" id="turnofuncionario" data-type="text" data-pk="1" data-original-title="Turno"></a><br>
+																	        
 																	    </address>
 																	</div>
 							
@@ -803,7 +1104,7 @@
 
 								<header>
 									<span class="widget-icon"> <i class="fa fa-check txt-color-white"></i> </span>
-									<h2>Funcionários</h2>
+									<h2>Dependentes</h2>
 									<div class="widget-toolbar">
 										<!-- add: non-hidden - to disable auto hide -->
 									</div>
@@ -822,42 +1123,30 @@
 									<!-- widget content -->
 									<div class="widget-body no-padding">
 										
-										<table id="funcionarios_list" class="display projects-table table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+										<table id="dependentes_list" class="display projects-table table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									        <thead>
 												<tr>
 													<th class="hasinput" >
 													</th>
 													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Funcionario" />
+														<input type="text" class="form-control" placeholder="Nome" />
 													</th>
 													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Admissão" />
+														<input type="text" class="form-control" placeholder="Sexo" />
 													</th>
 													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Cargo" />
+														<input type="text" class="form-control" placeholder="Data Nascimento" />
 													</th>
 													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Salário" />
-													</th>
-													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Lotação" />
-													</th>
-													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Tipo" />
-													</th>
-													<th class="hasinput" >
-														<input type="text" class="form-control" placeholder="Situação" />
+														<input type="text" class="form-control" placeholder="Tipo Dependencia" />
 													</th>
 												</tr>
 									            <tr>
 									                <th></th>
-									                <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>Funcionário</th>
-									                <th><i class="fa fa-fw fa-calendar hidden-md hidden-sm hidden-xs"></i>Admissão</th>
-									                <th><i class="fa fa-fw fa-cog text-muted hidden-md hidden-sm hidden-xs"></i>Cargo</th>
-									                <th><i class="fa fa-fw fa-dollar text-muted hidden-md hidden-sm hidden-xs"></i>Salário]</th>
-									                <th><i class="fa fa-fw fa-institution text-muted hidden-md hidden-sm hidden-xs"></i>Lotação</th>
-									                <th><i class="fa fa-fw fa-tag text-muted hidden-md hidden-sm hidden-xs"></i>Tipo</th>
-									                <th><i class="fa fa-fw fa-medkit hidden-md hidden-sm hidden-xs"></i>Situação</th>
+									                <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>Nome</th>
+									                <th><i class="fa fa-fw fa-calendar hidden-md hidden-sm hidden-xs"></i>Sexo</th>
+									                <th><i class="fa fa-fw fa-cog text-muted hidden-md hidden-sm hidden-xs"></i>Data Nascimento</th>
+									                <th><i class="fa fa-fw fa-dollar text-muted hidden-md hidden-sm hidden-xs"></i>Tipo Dependencia</th>
 									            </tr>
 									        </thead>
 									    </table>
@@ -1106,269 +1395,6 @@
 							<!-- end widget -->
 						</article>
 
-						<article class="col-sm-12 col-md-12 col-lg-6">
-
-							<!-- new widget -->
-							<div class="jarviswidget jarviswidget-color-blue" id="wid-id-122" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
-
-								<!-- widget options:
-								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-								data-widget-colorbutton="false"
-								data-widget-editbutton="false"
-								data-widget-togglebutton="false"
-								data-widget-deletebutton="false"
-								data-widget-fullscreenbutton="false"
-								data-widget-custombutton="false"
-								data-widget-collapsed="true"
-								data-widget-sortable="false"
-
-								-->
-
-								<header>
-									<span class="widget-icon"> <i class="fa fa-dollar txt-color-white"></i> </span>
-									<h2>Lançamentos de funcionários</h2>
-									<div class="widget-toolbar">
-										<div class="input-append date" id="mesAnoLancamentoMensal" data-date="02-2012" data-date-format="mm-yyyy">
-									</div>
-								</header>
-
-								<!-- widget div-->
-								<div>
-									
-									<!-- widget edit box -->
-									<div class="jarviswidget-editbox">
-										<!-- This area used as dropdown edit box -->
-										<input class="form-control" type="text">	
-									</div>
-									<!-- end widget edit box -->
-									
-									<!-- widget content -->
-									<div class="widget-body no-padding">
-										
-										<!--
-										The ID "widget-grid" will start to initialize all widgets below
-										You do not need to use widgets if you dont want to. Simply remove
-										the <section></section> and you can use wells or panels instead
-										-->
-						
-										<!-- widget grid -->
-										<section id="widget-grid" class="">
-						
-											<!-- row -->
-											<div class="row">
-						
-												<!-- NEW WIDGET START -->
-												<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">						
-													<table id="valoresFuncionarios"></table>
-													<div id="pgValoresFuncionarios"></div>					
-												</article>
-												<!-- WIDGET END -->
-						
-											</div>
-						
-											<!-- end row -->
-						
-										</section>
-										<!-- end widget grid -->
-
-									</div>
-									<!-- end widget content -->
-									
-								</div>
-								<!-- end widget div -->
-
-							</div>
-							<!-- end widget -->
-						</article>
-
-						<article class="col-sm-12 col-md-12 col-lg-6">
-
-							<!-- new widget -->
-							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-112" data-widget-colorbutton="false">
-
-								<!-- widget options:
-								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-								data-widget-colorbutton="false"
-								data-widget-editbutton="false"
-								data-widget-togglebutton="false"
-								data-widget-deletebutton="false"
-								data-widget-fullscreenbutton="false"
-								data-widget-custombutton="false"
-								data-widget-collapsed="true"
-								data-widget-sortable="false"
-
-								-->
-								<header>
-									<span class="widget-icon"> <i class="fa fa-calendar"></i> </span>
-									<h2> Calendário Asgard Comércio Ltda </h2>
-									<div class="widget-toolbar">
-										<!-- add: non-hidden - to disable auto hide -->
-										<div class="btn-group">
-											<button class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown">
-												Tipo <i class="fa fa-caret-down"></i>
-											</button>
-											<ul class="dropdown-menu js-status-update pull-right">
-												<li>
-													<a href="javascript:void(0);" id="mt">Mes</a>
-												</li>
-												<li>
-													<a href="javascript:void(0);" id="ag">Agenda</a>
-												</li>
-												<li>
-													<a href="javascript:void(0);" id="td">Hoje</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</header>
-
-								<!-- widget div-->
-								<div>
-									<!-- widget edit box -->
-									<div class="jarviswidget-editbox">
-
-										<input class="form-control" type="text">
-
-									</div>
-									<!-- end widget edit box -->
-
-									<div class="widget-body no-padding">
-										<!-- content goes here -->
-										<div class="widget-body-toolbar">
-
-											<div id="calendar-buttons">
-
-												<div class="btn-group">
-													<a href="javascript:void(0)" class="btn btn-default btn-xs" id="btn-prev"><i class="fa fa-chevron-left"></i></a>
-													<a href="javascript:void(0)" class="btn btn-default btn-xs" id="btn-next"><i class="fa fa-chevron-right"></i></a>
-												</div>
-											</div>
-										</div>
-										<div id="calendar"></div>
-
-										<!-- end content -->
-									</div>
-
-								</div>
-								<!-- end widget div -->
-							</div>
-							<!-- end widget -->
-
-						</article>
-
-						<article class="col-sm-12 col-md-12 col-lg-6">
-
-							<!-- new widget -->
-							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-112" data-widget-colorbutton="false">
-
-								<!-- widget options:
-								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
-
-								data-widget-colorbutton="false"
-								data-widget-editbutton="false"
-								data-widget-togglebutton="false"
-								data-widget-deletebutton="false"
-								data-widget-fullscreenbutton="false"
-								data-widget-custombutton="false"
-								data-widget-collapsed="true"
-								data-widget-sortable="false"
-
-								-->
-								<header>
-									<span class="widget-icon"> <i class="fa fa-calendar"></i> </span>
-									<h2> Tarefas da Asgard Comércio Ltda </h2>
-									<div class="widget-toolbar">
-									</div>
-								</header>
-
-								<!-- widget div-->
-								<div>
-									<!-- widget edit box -->
-									<div class="jarviswidget-editbox">
-
-										<input class="form-control" type="text">
-
-									</div>
-									<!-- end widget edit box -->
-
-									<div class="widget-body no-padding">
-										<!-- content goes here -->
-										<div class="widget-body-toolbar">
-											<div class="well padding-10">
-												<h5 class="margin-top-0"><i class="fa fa-fire"></i> Tarefas:</h5>
-												<div class="widget-body no-padding smart-form">
-													<!-- content goes here -->
-													<h5 class="todo-group-title"><i class="fa fa-warning"></i> Criticas (<small class="num-of-tasks">1</small>)</h5>
-													<ul id="sortable1" class="todo">
-														<li>
-															<span class="handle"> <label class="checkbox">
-																	<input type="checkbox" name="checkbox-inline">
-																	<i></i> </label> </span>
-															<p>
-																<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
-																<span class="date">Jan 1, 2014</span>
-															</p>
-														</li>
-													</ul>
-													<h5 class="todo-group-title"><i class="fa fa-exclamation"></i> Importantes (<small class="num-of-tasks">3</small>)</h5>
-													<ul id="sortable2" class="todo">
-														<li>
-															<span class="handle"> <label class="checkbox">
-																	<input type="checkbox" name="checkbox-inline">
-																	<i></i> </label> </span>
-															<p>
-																<strong>Ticket #1347</strong> - Inbox email is being sent twice <small>(bug fix)</small> [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="date">Nov 22, 2013</span>
-															</p>
-														</li>
-														<li>
-															<span class="handle"> <label class="checkbox">
-																	<input type="checkbox" name="checkbox-inline">
-																	<i></i> </label> </span>
-															<p>
-																<strong>Ticket #1314</strong> - Call customer support re: Issue <a href="javascript:void(0);" class="font-xs">#6134</a><small>(code review)</small>
-																<span class="date">Nov 22, 2013</span>
-															</p>
-														</li>
-														<li>
-															<span class="handle"> <label class="checkbox">
-																	<input type="checkbox" name="checkbox-inline">
-																	<i></i> </label> </span>
-															<p>
-																<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
-																<span class="date">Jan 1, 2014</span>
-															</p>
-														</li>
-													</ul>
-					
-													<h5 class="todo-group-title"><i class="fa fa-check"></i> Completadas (<small class="num-of-tasks">1</small>)</h5>
-													<ul id="sortable3" class="todo">
-														<li class="complete">
-															<span class="handle" style="display:none"> <label class="checkbox state-disabled">
-																	<input type="checkbox" name="checkbox-inline" checked="checked" disabled="disabled">
-																	<i></i> </label> </span>
-															<p>
-																<strong>Ticket #17643</strong> - Hotfix for WebApp interface issue [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
-																<span class="date">Jan 1, 2014</span>
-															</p>
-														</li>
-													</ul>
-					
-													<!-- end content -->
-												</div>
-											</div>
-
-										<!-- end content -->
-									</div>
-
-								</div>
-								<!-- end widget div -->
-							</div>
-							<!-- end widget -->
-
-						</article>
-
 					</div>
 
 					<!-- end row -->
@@ -1588,12 +1614,16 @@
 		<script src="js/plugin/jqgrid/jquery.jqGrid.min.js"></script>
 		<script src="js/plugin/jqgrid/grid.locale-en.min.js"></script>
 
-
-
 		<!-- out scripts -->
 		<script src="js-grid/grids.js"></script>
-		<script src="js-datatables/datatables.js"></script>
-		<script src="js-camposeditaveis/empresa.js"></script>
+		<script src="js-datatables/dependente.js"></script>
+		<script src="js-camposeditaveis/funcionario.js"></script>
+		<script src="js-wizard/wizard.js"></script>
+
+
+		<!-- plugin wizard -->
+		<script src="js/plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+		<script src="js/plugin/fuelux/wizard/wizard.min.js"></script>
 
 		<script>
 			$(document).ready(function() {
@@ -1601,6 +1631,44 @@
 				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
 
+				//
+				//  inicializa data nascimento
+				//
+				$('#nascimento').datepicker();
+				//
+				//  wizard
+				//
+				  $('#bootstrap-wizard-1').bootstrapWizard({
+					    'tabClass': 'form-wizard',
+					    'onNext': function (tab, navigation, index) {
+					      var $valid = $("#wizard-1").valid();
+					      if (!$valid) {
+					        $validator.focusInvalid();
+					        return false;
+					      } else {
+					        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).addClass(
+					          'complete');
+					        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).find('.step')
+					        .html('<i class="fa fa-check"></i>');
+					      }
+					    }
+					  });
+
+				// fuelux wizard
+				  var wizard = $('.wizard').wizard();
+				  
+				  wizard.on('finished', function (e, data) {
+				    //$("#fuelux-wizard").submit();
+				    //console.log("submitted!");
+				    $.smallBox({
+				      title: "Congratulations! Your form was submitted",
+				      content: "<i class='fa fa-clock-o'></i> <i>1 seconds ago...</i>",
+				      color: "#5F895F",
+				      iconSmall: "fa fa-check bounce animated",
+				      timeout: 4000
+				    });
+				    
+				  });
 
 				//
 				//  Movimenta o mes do calendário
@@ -1623,11 +1691,11 @@
 				 */		
 
 				Dropzone.autoDiscover = false;
-				$("#logoempresa").dropzone({
+				$("#fotofuncionario").dropzone({
 					//url: "/file/post",
 					addRemoveLinks : true,
 					maxFilesize: 5.5,
-					dictDefaultMessage: '<span class="text-center cargalogo">Logo</span><br><span class="text-center cargalogo">Drag or Click</span>',
+					dictDefaultMessage: '<span class="text-center cargalogo">Foto</span><br><span class="text-center cargalogo">Drag or Click</span>',
 					dictResponseError: 'Error uploading file!'
 				});
 

@@ -36,7 +36,7 @@
 				
 				/* BASIC datatables*/
 
-				var responsiveHelper_dependentes_list = undefined;
+				var responsiveHelper_funcionarios_list = undefined;
 				
 				var breakpointDefinition = {
 					tablet : 1024,

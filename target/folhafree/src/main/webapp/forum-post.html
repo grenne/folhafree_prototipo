@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-		<title> SmartAdmin </title>
+		<title> Folha Free </title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 			
@@ -19,12 +19,12 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
 
-		<!-- SmartAdmin RTL Support -->
-		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css"> 
+		<!-- SmartAdmin RTL Support  -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
 
 		<!-- We recommend you use "your_style.css" to override SmartAdmin
-		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
-		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.-->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> 
 
 		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
@@ -51,6 +51,9 @@
 		<link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
 		<link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
 		<link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+		<!-- Time Slider -->
+		<link href="css-timeline/timeslider.css" rel="stylesheet" type="text/css"/>
 
 	</head>
 	
@@ -98,14 +101,15 @@
 		* 'fixed-page-footer' - Fixes footer
 		* 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
 	-->
-	<body class="">
-
+	<body class="smart-style-3">
+  
+  <!-- Cabeçalho-->
 		<!-- HEADER -->
 		<header id="header">
 			<div id="logo-group">
 
 				<!-- PLACE YOUR LOGO HERE -->
-				<span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span>
+				<span id="logo"> Logo Folha Free</span>
 				<!-- END LOGO PLACEHOLDER -->
 
 				<!-- Note: The activity badge color changes when clicked and resets the number to 0
@@ -145,39 +149,14 @@
 					<span> Last updated on: 12/12/2013 9:43AM
 						<button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Loading..." class="btn btn-xs btn-default pull-right">
 							<i class="fa fa-refresh"></i>
-						</button> </span>
+						</button> 
+					</span>
 					<!-- end footer -->
 
 				</div>
 				<!-- END AJAX-DROPDOWN -->
 			</div>
 
-			<!-- projects dropdown -->
-			<div class="project-context hidden-xs">
-
-				<span class="label">Projects:</span>
-				<span class="project-selector dropdown-toggle" data-toggle="dropdown">Recent projects <i class="fa fa-angle-down"></i></span>
-
-				<!-- Suggestion: populate this list with fetch and push technique -->
-				<ul class="dropdown-menu">
-					<li>
-						<a href="javascript:void(0);">Online e-merchant management system - attaching integration with the iOS</a>
-					</li>
-					<li>
-						<a href="javascript:void(0);">Notes on pipeline upgradee</a>
-					</li>
-					<li>
-						<a href="javascript:void(0);">Assesment Report for merchant account</a>
-					</li>
-					<li class="divider"></li>
-					<li>
-						<a href="javascript:void(0);"><i class="fa fa-power-off"></i> Clear</a>
-					</li>
-				</ul>
-				<!-- end dropdown-menu-->
-
-			</div>
-			<!-- end projects dropdown -->
 
 			<!-- pulled right: nav area -->
 			<div class="pull-right">
@@ -193,7 +172,7 @@
 				<ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
 					<li class="">
 						<a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown"> 
-							<img src="img/avatars/sunny.png" alt="John Doe" class="online" />  
+							<img src="img/avatars/photo.png" alt="John Doe" class="online" />  
 						</a>
 						<ul class="dropdown-menu pull-right">
 							<li>
@@ -336,6 +315,8 @@
 		</header>
 		<!-- END HEADER -->
 
+
+  <!-- Menu lateral -->
 		<!-- Left panel : Navigation area -->
 		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
 		<aside id="left-panel">
@@ -345,9 +326,9 @@
 				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
 					
 					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-						<img src="img/avatars/sunny.png" alt="me" class="online" /> 
+						<img src="img/avatars/photo.png" alt="me" class="online" /> 
 						<span>
-							john.doe 
+							Grenne 
 						</span>
 						<i class="fa fa-angle-down"></i>
 					</a> 
@@ -356,6 +337,7 @@
 			</div>
 			<!-- end user info -->
 
+			<!-- NAVIGATION : This navigation is also responsive-->
 			<nav>
 				<!-- 
 				NOTE: Notice the gaps after each icon usage <i></i>..
@@ -364,424 +346,26 @@
 				-->
 
 				<ul>
-					<li>
+					<li class="active">
 						<a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>
 						<ul>
-							<li>
-								<a href="index.html" title="Dashboard"><span class="menu-item-parent">Analytics Dashboard</span></a>
-							</li>
-							<li class="">
-								<a href="dashboard-social.html" title="Dashboard"><span class="menu-item-parent">Social Wall</span></a>
-							</li>
-						</ul>	
-					</li>
-					<li class="top-menu-invisible">
-						<a href="#"><i class="fa fa-lg fa-fw fa-cube txt-color-blue"></i> <span class="menu-item-parent">SmartAdmin Intel</span></a>
-						<ul>
-							<li class="">
-								<a href="layouts.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-gear"></i> <span class="menu-item-parent">App Layouts</span></a>
-							</li>
-							<li class="">
-								<a href="skins.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-picture-o"></i> <span class="menu-item-parent">Prebuilt Skins</span></a>
-							</li>
-							<li>
-								<a href="applayout.html"><i class="fa fa-cube"></i> App Settings</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="inbox.html"><i class="fa fa-lg fa-fw fa-inbox"></i> <span class="menu-item-parent">Outlook</span> <span class="badge pull-right inbox-badge margin-right-13">14</span></a>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent">Graphs</span></a>
-						<ul>
-							<li>
-								<a href="flot.html">Flot Chart</a>
-							</li>
-							<li>
-								<a href="morris.html">Morris Charts</a>
-							</li>
-							<li>
-								<a href="sparkline-charts.html">Sparklines</a>
-							</li>
-							<li>
-								<a href="easypie-charts.html">EasyPieCharts</a>
-							</li>
-							<li>
-								<a href="dygraphs.html">Dygraphs</a>
-							</li>
-							<li>
-								<a href="chartjs.html">Chart.js</a>
-							</li>
-							<li>
-								<a href="hchartable.html">HighchartTable <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Tables</span></a>
-						<ul>
-							<li>
-								<a href="table.html">Normal Tables</a>
-							</li>
-							<li>
-								<a href="datatables.html">Data Tables <span class="badge inbox-badge bg-color-greenLight hidden-mobile">responsive</span></a>
-							</li>
-							<li>
-								<a href="jqgrid.html">Jquery Grid</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Forms</span></a>
-						<ul>
-							<li>
-								<a href="form-elements.html">Smart Form Elements</a>
-							</li>
-							<li>
-								<a href="form-templates.html">Smart Form Layouts</a>
-							</li>
-							<li>
-								<a href="validation.html">Smart Form Validation</a>
-							</li>
-							<li>
-								<a href="bootstrap-forms.html">Bootstrap Form Elements</a>
-							</li>
-							<li>
-								<a href="bootstrap-validator.html">Bootstrap Form Validation</a>
-							</li>
-							<li>
-								<a href="plugins.html">Form Plugins</a>
-							</li>
-							<li>
-								<a href="wizard.html">Wizards</a>
-							</li>
-							<li>
-								<a href="other-editors.html">Bootstrap Editors</a>
-							</li>
-							<li>
-								<a href="dropzone.html">Dropzone</a>
-							</li>
-							<li>
-								<a href="image-editor.html">Image Cropping</a>
-							</li>
-							<li>
-								<a href="ckeditor.html">CK Editor</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">UI Elements</span></a>
-						<ul>
-							<li>
-								<a href="general-elements.html">General Elements</a>
-							</li>
-							<li>
-								<a href="buttons.html">Buttons</a>
-							</li>
-							<li>
-								<a href="#">Icons</a>
-								<ul>
-									<li>
-										<a href="fa.html"><i class="fa fa-plane"></i> Font Awesome</a>
-									</li>
-									<li>
-										<a href="glyph.html"><i class="glyphicon glyphicon-plane"></i> Glyph Icons</a>
-									</li>
-									<li>
-										<a href="flags.html"><i class="fa fa-flag"></i> Flags</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="grid.html">Grid</a>
-							</li>
-							<li>
-								<a href="treeview.html">Tree View</a>
-							</li>
-							<li>
-								<a href="nestable-list.html">Nestable Lists</a>
-							</li>
-							<li>
-								<a href="jqui.html">JQuery UI</a>
-							</li>
-							<li>
-								<a href="typography.html">Typography</a>
-							</li>
-							<li>
-								<a href="#">Six Level Menu</a>
-								<ul>
-									<li>
-										<a href="#"><i class="fa fa-fw fa-folder-open"></i> Item #2</a>
-										<ul>
-											<li>
-												<a href="#"><i class="fa fa-fw fa-folder-open"></i> Sub #2.1 </a>
-												<ul>
-													<li>
-														<a href="#"><i class="fa fa-fw fa-file-text"></i> Item #2.1.1</a>
-													</li>
-													<li>
-														<a href="#"><i class="fa fa-fw fa-plus"></i> Expand</a>
-														<ul>
-															<li>
-																<a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-fw fa-folder-open"></i> Item #3</a>
-		
-										<ul>
-											<li>
-												<a href="#"><i class="fa fa-fw fa-folder-open"></i> 3ed Level </a>
-												<ul>
-													<li>
-														<a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-													</li>
-													<li>
-														<a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-													</li>
-												</ul>
-											</li>
-										</ul>	
-									</li>
-									<li>
-										<a href="#" class="inactive"><i class="fa fa-fw fa-folder-open"></i> Item #4 (disabled)</a>
-									</li>	
-									
-								</ul>
-							</li>
-						</ul>
-					</li>	
-					<li>
-						<a href="widgets.html"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-cloud"><em>3</em></i> <span class="menu-item-parent">Cool Features!</span></a>
-						<ul>
-							<li>
-								<a href="calendar.html"><i class="fa fa-lg fa-fw fa-calendar"></i> <span class="menu-item-parent">Calendar</span></a>
-							</li>
-							<li>
-								<a href="gmap-xml.html"><i class="fa fa-lg fa-fw fa-map-marker"></i> <span class="menu-item-parent">GMap Skins</span><span class="badge bg-color-greenLight pull-right inbox-badge">9</span></a>
-							</li>
-						</ul>
-					</li>	
-					<li class="active">
-						<a href="#"><i class="fa fa-lg fa-fw fa-puzzle-piece"></i> <span class="menu-item-parent">App Views</span></a>
-						<ul>
-							<li>
-								<a href="projects.html"><i class="fa fa-file-text-o"></i> Projects</a>
-							</li>	
-							<li>
-								<a href="blog.html"><i class="fa fa-paragraph"></i> Blog</a>
-							</li>
-							<li>
-								<a href="gallery.html"><i class="fa fa-picture-o"></i> Gallery</a>
-							</li>
 							<li class="active">
-								<a href="#"><i class="fa fa-comments"></i> Forum Layout</a>
-								<ul>
-									<li><a href="forum.html">General View</a></li>
-									<li><a href="forum-topic.html">Topic View</a></li>
-									<li class="active"><a href="forum-post.html">Post View</a></li>
-								</ul>
+								<a href="index.html" title="Dashboard"><span class="menu-item-parent">Home</span></a>
 							</li>
-							<li>
-								<a href="profile.html"><i class="fa fa-group"></i> Profile</a>
+							<li class="">
+								<a href="empresa.html" title="Dashboard"><span class="menu-item-parent">Empresas</span></a>
 							</li>
-							<li>
-								<a href="timeline.html"><i class="fa fa-clock-o"></i> Timeline</a>
+							<li class="">
+								<a href="agency.html" title="Dashboard"><span class="menu-item-parent">Funcionários</span></a>
 							</li>
-							<li>
-								<a href="search.html"><i class="fa fa-search"></i>  Search Page</a>
+							<li class="">
+								<a href="family.html" title="Dashboard"><span class="menu-item-parent">Processos</span></a>
 							</li>
-						</ul>		
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-shopping-cart"></i> <span class="menu-item-parent">E-Commerce</span></a>
-						<ul>
-							<li><a href="orders.html">Orders</a></li>
-							<li><a href="products-view.html">Products View</a></li>
-							<li><a href="products-detail.html">Products Detail</a></li>
-						</ul>
-					</li>	
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-windows"></i> <span class="menu-item-parent">Miscellaneous</span></a>
-						<ul>
-							<li>
-								<a href="../Landing_Page/" target="_blank">Landing Page <i class="fa fa-external-link"></i></a>
+							<li class="">
+								<a href="forum.html" title="Dashboard"><span class="menu-item-parent">Fórum</span></a>
 							</li>
-							<li>
-								<a href="pricing-table.html">Pricing Tables</a>
-							</li>
-							<li>
-								<a href="invoice.html">Invoice</a>
-							</li>
-							<li>
-								<a href="login.html" target="_top">Login</a>
-							</li>
-							<li>
-								<a href="register.html" target="_top">Register</a>
-							</li>
-							<li>
-								<a href="forgotpassword.html" target="_top">Forgot Password</a>
-							</li>
-							<li>
-								<a href="lock.html" target="_top">Locked Screen</a>
-							</li>
-							<li>
-								<a href="error404.html">Error 404</a>
-							</li>
-							<li>
-								<a href="error500.html">Error 500</a>
-							</li>
-							<li>
-								<a href="blank_.html">Blank Page</a>
-							</li>
-						</ul>
-					</li>
-					<li class="chat-users top-menu-invisible">
-						<a href="#"><i class="fa fa-lg fa-fw fa-comment-o"><em class="bg-color-pink flash animated">!</em></i> <span class="menu-item-parent">Smart Chat API <sup>beta</sup></span></a>
-						<ul>
-							<li>
-								<!-- DISPLAY USERS -->
-								<div class="display-users">
-
-									<input class="form-control chat-user-filter" placeholder="Filter" type="text">
-									
-								  	<a href="#" class="usr" 
-									  	data-chat-id="cha1" 
-									  	data-chat-fname="Sadi" 
-									  	data-chat-lname="Orlaf" 
-									  	data-chat-status="busy" 
-									  	data-chat-alertmsg="Sadi Orlaf is in a meeting. Please do not disturb!" 
-									  	data-chat-alertshow="true" 
-									  	data-rel="popover-hover" 
-									  	data-placement="right" 
-									  	data-html="true" 
-									  	data-content="
-											<div class='usr-card'>
-												<img src='img/avatars/5.png' alt='Sadi Orlaf'>
-												<div class='usr-card-content'>
-													<h3>Sadi Orlaf</h3>
-													<p>Marketing Executive</p>
-												</div>
-											</div>
-										"> 
-									  	<i></i>Sadi Orlaf
-								  	</a>
-								  
-									<a href="#" class="usr" 
-										data-chat-id="cha2" 
-									  	data-chat-fname="Jessica" 
-									  	data-chat-lname="Dolof" 
-									  	data-chat-status="online" 
-									  	data-chat-alertmsg="" 
-									  	data-chat-alertshow="false" 
-									  	data-rel="popover-hover" 
-									  	data-placement="right" 
-									  	data-html="true" 
-									  	data-content="
-											<div class='usr-card'>
-												<img src='img/avatars/1.png' alt='Jessica Dolof'>
-												<div class='usr-card-content'>
-													<h3>Jessica Dolof</h3>
-													<p>Sales Administrator</p>
-												</div>
-											</div>
-										"> 
-									  	<i></i>Jessica Dolof
-									</a>
-								  
-									<a href="#" class="usr" 
-									  	data-chat-id="cha3" 
-									  	data-chat-fname="Zekarburg" 
-									  	data-chat-lname="Almandalie" 
-									  	data-chat-status="online" 
-									  	data-rel="popover-hover" 
-									  	data-placement="right" 
-									  	data-html="true" 
-									  	data-content="
-											<div class='usr-card'>
-												<img src='img/avatars/3.png' alt='Zekarburg Almandalie'>
-												<div class='usr-card-content'>
-													<h3>Zekarburg Almandalie</h3>
-													<p>Sales Admin</p>
-												</div>
-											</div>
-										"> 
-									  	<i></i>Zekarburg Almandalie
-									</a>
-								 
-									<a href="#" class="usr" 
-									  	data-chat-id="cha4" 
-									  	data-chat-fname="Barley" 
-									  	data-chat-lname="Krazurkth" 
-									  	data-chat-status="away" 
-									  	data-rel="popover-hover" 
-									  	data-placement="right" 
-									  	data-html="true" 
-									  	data-content="
-											<div class='usr-card'>
-												<img src='img/avatars/4.png' alt='Barley Krazurkth'>
-												<div class='usr-card-content'>
-													<h3>Barley Krazurkth</h3>
-													<p>Sales Director</p>
-												</div>
-											</div>
-										"> 
-									  	<i></i>Barley Krazurkth
-									</a>
-								  
-									<a href="#" class="usr offline" 
-									  	data-chat-id="cha5" 
-									  	data-chat-fname="Farhana" 
-									  	data-chat-lname="Amrin" 
-									  	data-chat-status="incognito" 
-									  	data-rel="popover-hover" 
-									  	data-placement="right" 
-									  	data-html="true" 
-									  	data-content="
-											<div class='usr-card'>
-												<img src='img/avatars/female.png' alt='Farhana Amrin'>
-												<div class='usr-card-content'>
-													<h3>Farhana Amrin</h3>
-													<p>Support Admin <small><i class='fa fa-music'></i> Playing Beethoven Classics</small></p>
-												</div>
-											</div>
-										"> 
-									  	<i></i>Farhana Amrin (offline)
-									</a>
-								  
-									<a href="#" class="usr offline" 
-										data-chat-id="cha6" 
-									  	data-chat-fname="Lezley" 
-									  	data-chat-lname="Jacob" 
-									  	data-chat-status="incognito" 
-									  	data-rel="popover-hover" 
-									  	data-placement="right" 
-									  	data-html="true" 
-									  	data-content="
-											<div class='usr-card'>
-												<img src='img/avatars/male.png' alt='Lezley Jacob'>
-												<div class='usr-card-content'>
-													<h3>Lezley Jacob</h3>
-													<p>Sales Director</p>
-												</div>
-											</div>
-										"> 
-									  	<i></i>Lezley Jacob (offline)
-									</a>
-									
-									<a href="ajax/chat.html" class="btn btn-xs btn-default btn-block sa-chat-learnmore-btn">About the API</a>
-
-								</div>
-								<!-- END DISPLAY USERS -->
+							<li class="">
+								<a href="administrator.html" title="Dashboard"><span class="menu-item-parent">Administrator</span></a>
 							</li>
 						</ul>	
 					</li>
@@ -795,7 +379,7 @@
 
 		</aside>
 		<!-- END NAVIGATION -->
-
+  <!-- Paineis -->
 		<!-- MAIN PANEL -->
 		<div id="main" role="main">
 
@@ -810,7 +394,7 @@
 
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-					<li>Home</li><li>App Views</li><li>Forum Layout</li><li>Post View</li>
+					<li>Fórum</li>
 				</ol>
 				<!-- end breadcrumb -->
 
@@ -827,6 +411,8 @@
 
 			</div>
 			<!-- END RIBBON -->
+			
+			
 
 			<!-- MAIN CONTENT -->
 			<div id="content">
@@ -837,36 +423,8 @@
 
 					<!-- col -->
 					<div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
-						<h1 class="page-title txt-color-blueDark"><!-- PAGE HEADER --><i class="fa-fw fa fa-puzzle-piece"></i> App Views <span>>
-							Forum Layout > Post View </span></h1>
-					</div>
-					<!-- end col -->
-
-					<!-- right side of the page with the sparkline graphs -->
-					<!-- col -->
-					<div class="col-xs-12 col-sm-9 col-md-8 col-lg-8">
-						<!-- sparks -->
-						<ul id="sparks">
-							<li class="sparks-info">
-								<h5> My Income <span class="txt-color-blue">$47,171</span></h5>
-								<div class="sparkline txt-color-blue hidden-mobile">
-									1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
-								</div>
-							</li>
-							<li class="sparks-info">
-								<h5> Site Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up" title="Increased"></i>&nbsp;45%</span></h5>
-								<div class="sparkline txt-color-purple hidden-mobile">
-									110,150,300,130,400,240,220,310,220,300, 270, 210
-								</div>
-							</li>
-							<li class="sparks-info">
-								<h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
-								<div class="sparkline txt-color-greenDark hidden-mobile">
-									110,150,300,130,400,240,220,310,220,300, 270, 210
-								</div>
-							</li>
-						</ul>
-						<!-- end sparks -->
+						<h1 class="page-title txt-color-blueDark"><!-- PAGE HEADER --><i class="fa-fw fa fa-puzzle-piece"></i> Fórum <span>>
+							Tópico > Post</span></h1>
 					</div>
 					<!-- end col -->
 
@@ -1016,7 +574,7 @@
 		<div class="page-footer">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
-					<span class="txt-color-white">SmartAdmin 1.8.0 <span class="hidden-xs"> - Web Application Framework</span> © 2014-2015</span>
+					<span class="txt-color-white">Folha Free<span class="hidden-xs"> - Web Application</span></span>
 				</div>
 
 				<div class="col-xs-6 col-sm-6 text-right hidden-xs">
@@ -1173,25 +731,2109 @@
 		<!-- SmartChat UI : plugin -->
 		<script src="js/smart-chat-ui/smart.chat.ui.min.js"></script>
 		<script src="js/smart-chat-ui/smart.chat.manager.min.js"></script>
+		
+		<!-- PAGE RELATED PLUGIN(S) -->
+		
+		<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+		<script src="js/plugin/flot/jquery.flot.cust.min.js"></script>
+		<script src="js/plugin/flot/jquery.flot.resize.min.js"></script>
+		<script src="js/plugin/flot/jquery.flot.time.min.js"></script>
+		<script src="js/plugin/flot/jquery.flot.tooltip.min.js"></script>
+		
+		<!-- Vector Maps Plugin: Vectormap engine, Vectormap language -->
+		<script src="js/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="js/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+		
+		<!-- Full Calendar -->
+		<script src="js/plugin/moment/moment.min.js"></script>
+		<script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
 
-		<!-- PAGE RELATED PLUGIN(S)-->
-		<script src="js/plugin/summernote/summernote.min.js"></script>
+		<!-- Datatables --> 
 
-		<script type="text/javascript">
-			// DO NOT REMOVE : GLOBAL FUNCTIONS!
+		<script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
+		<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+		<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
 
+		<!-- PAGE RELATED GRAPHS 
+		<script src="..."></script>-->
+		<script src="js/plugin/highChartCore/highcharts-custom.min.js"></script>
+		<script src="js/plugin/highchartTable/jquery.highchartTable.min.js"></script>
+
+
+		<!-- PAGE RELATED ckeditor -->
+		<script src="js/plugin/ckeditor/ckeditor.js"></script>
+
+		<!-- Plugin timeslider -->
+		<script src="js-timeline/timeslider.js"></script>
+
+		<script>
 			$(document).ready(function() {
 
+				// DO NOT REMOVE : GLOBAL FUNCTIONS!
 				pageSetUp();
-
-				$('#forumPost').summernote({
-					height : 180,
-					focus : false,
-					tabsize : 2
+				/*
+				 * Autostart Carousel
+				 */
+				$('.carousel.slide').carousel({
+					interval : 0,
+					cycle : true
 				});
 				
-			})
+				/*
+				 * setup ckeditor
+				 */
+				CKEDITOR.replace( 'ckeditor', { height: '380px', startupFocus : true} );
+				CKEDITOR.replace( 'ckeditor_family', { height: '380px', startupFocus : true} );
 
+				/*
+				 * PAGE RELATED SCRIPTS
+				 */
+
+				$(".js-status-update a").click(function() {
+					var selText = $(this).text();
+					var $this = $(this);
+					$this.parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+					$this.parents('.dropdown-menu').find('li').removeClass('active');
+					$this.parent().addClass('active');
+				});
+
+				/*
+				* TODO: add a way to add more todo's to list
+				*/
+
+				// initialize sortable
+				$(function() {
+					$("#sortable1, #sortable2").sortable({
+						handle : '.handle',
+						connectWith : ".todo",
+						update : countTasks
+					}).disableSelection();
+				});
+
+				// check and uncheck
+				$('.todo .checkbox > input[type="checkbox"]').click(function() {
+					var $this = $(this).parent().parent().parent();
+
+					if ($(this).prop('checked')) {
+						$this.addClass("complete");
+
+						// remove this if you want to undo a check list once checked
+						//$(this).attr("disabled", true);
+						$(this).parent().hide();
+
+						// once clicked - add class, copy to memory then remove and add to sortable3
+						$this.slideUp(500, function() {
+							$this.clone().prependTo("#sortable3").effect("highlight", {}, 800);
+							$this.remove();
+							countTasks();
+						});
+					} else {
+						// insert undo code here...
+					}
+
+				})
+				// count tasks
+				function countTasks() {
+
+					$('.todo-group-title').each(function() {
+						var $this = $(this);
+						$this.find(".num-of-tasks").text($this.next().find("li").size());
+					});
+
+				}
+
+				/*
+				* RUN PAGE GRAPHS
+				*/
+
+				/* TAB 1: UPDATING CHART */
+				// For the demo we use generated data, but normally it would be coming from the server
+
+				var data = [], totalPoints = 200, $UpdatingChartColors = $("#updating-chart").css('color');
+
+				function getRandomData() {
+					if (data.length > 0)
+						data = data.slice(1);
+
+					// do a random walk
+					while (data.length < totalPoints) {
+						var prev = data.length > 0 ? data[data.length - 1] : 50;
+						var y = prev + Math.random() * 10 - 5;
+						if (y < 0)
+							y = 0;
+						if (y > 100)
+							y = 100;
+						data.push(y);
+					}
+
+					// zip the generated y values with the x values
+					var res = [];
+					for (var i = 0; i < data.length; ++i)
+						res.push([i, data[i]])
+					return res;
+				}
+
+				// setup control widget
+				var updateInterval = 1500;
+				$("#updating-chart").val(updateInterval).change(function() {
+
+					var v = $(this).val();
+					if (v && !isNaN(+v)) {
+						updateInterval = +v;
+						$(this).val("" + updateInterval);
+					}
+
+				});
+
+				// setup plot
+				var options = {
+					yaxis : {
+						min : 0,
+						max : 100
+					},
+					xaxis : {
+						min : 0,
+						max : 100
+					},
+					colors : [$UpdatingChartColors],
+					series : {
+						lines : {
+							lineWidth : 1,
+							fill : true,
+							fillColor : {
+								colors : [{
+									opacity : 0.4
+								}, {
+									opacity : 0
+								}]
+							},
+							steps : false
+
+						}
+					}
+				};
+
+				/* live switch */
+				$('input[type="checkbox"]#start_interval').click(function() {
+					if ($(this).prop('checked')) {
+						$on = true;
+						updateInterval = 1500;
+						update();
+					} else {
+						clearInterval(updateInterval);
+						$on = false;
+					}
+				});
+
+				function update() {
+					if ($on == true) {
+						plot.setData([getRandomData()]);
+						plot.draw();
+						setTimeout(update, updateInterval);
+
+					} else {
+						clearInterval(updateInterval)
+					}
+
+				}
+
+				var $on = false;
+
+				/*end updating chart*/
+
+
+				// TAB THREE GRAPH //
+				/* TAB 3: Revenew  */
+
+				$(function() {
+
+					var trgt = [[1354586000000, 153], [1364587000000, 658], [1374588000000, 198], [1384589000000, 663], [1394590000000, 801], [1404591000000, 1080], [1414592000000, 353], [1424593000000, 749], [1434594000000, 523], [1444595000000, 258], [1454596000000, 688], [1464597000000, 364]], prft = [[1354586000000, 53], [1364587000000, 65], [1374588000000, 98], [1384589000000, 83], [1394590000000, 980], [1404591000000, 808], [1414592000000, 720], [1424593000000, 674], [1434594000000, 23], [1444595000000, 79], [1454596000000, 88], [1464597000000, 36]], sgnups = [[1354586000000, 647], [1364587000000, 435], [1374588000000, 784], [1384589000000, 346], [1394590000000, 487], [1404591000000, 463], [1414592000000, 479], [1424593000000, 236], [1434594000000, 843], [1444595000000, 657], [1454596000000, 241], [1464597000000, 341]], toggles = $("#rev-toggles"), target = $("#flotcontainer");
+
+					var data = [{
+						label : "Target Profit",
+						data : trgt,
+						bars : {
+							show : true,
+							align : "center",
+							barWidth : 30 * 30 * 60 * 1000 * 80
+						}
+					}, {
+						label : "Actual Profit",
+						data : prft,
+						color : '#3276B1',
+						lines : {
+							show : true,
+							lineWidth : 3
+						},
+						points : {
+							show : true
+						}
+					}, {
+						label : "Accommodated",
+						data : sgnups,
+						color : '#71843F',
+						lines : {
+							show : true,
+							lineWidth : 1
+						},
+						points : {
+							show : true
+						}
+					}]
+
+					var options = {
+						grid : {
+							hoverable : true
+						},
+						tooltip : true,
+						tooltipOpts : {
+							//content: '%x - %y',
+							//dateFormat: '%b %y',
+							defaultTheme : false
+						},
+						xaxis : {
+							mode : "time"
+						},
+						yaxes : {
+							tickFormatter : function(val, axis) {
+								return "$" + val;
+							},
+							max : 1200
+						}
+
+					};
+
+					plot2 = null;
+
+					function plotNow() {
+						var d = [];
+						toggles.find(':checkbox').each(function() {
+							if ($(this).is(':checked')) {
+								d.push(data[$(this).attr("name").substr(4, 1)]);
+							}
+						});
+						if (d.length > 0) {
+							if (plot2) {
+								plot2.setData(d);
+								plot2.draw();
+							} else {
+								plot2 = $.plot(target, d, options);
+							}
+						}
+
+					};
+
+					toggles.find(':checkbox').on('change', function() {
+						plotNow();
+					});
+					plotNow()
+
+				});
+
+				/*
+				 * VECTOR MAP
+				 */
+
+				data_array = {
+					"US" : 232,
+					"AU" : 4873,
+					"IN" : 3671,
+					"BR" : 2476,
+					"TR" : 1476,
+					"CN" : 146,
+					"CA" : 134,
+					"BD" : 100
+				};
+
+				$('#vector-map').vectorMap({
+					map : 'world_mill_en',
+					backgroundColor : '#fff',
+					regionStyle : {
+						initial : {
+							fill : '#c4c4c4'
+						},
+						hover : {
+							"fill-opacity" : 1
+						}
+					},
+					series : {
+						regions : [{
+							values : data_array,
+							scale : ['#85a8b6', '#4d7686'],
+							normalizeFunction : 'polynomial'
+						}]
+					},
+					onRegionLabelShow : function(e, el, code) {
+						if ( typeof data_array[code] == 'undefined') {
+							e.preventDefault();
+						} else {
+							var countrylbl = data_array[code];
+							el.html(el.html() + ': ' + countrylbl + ' accommodated');
+						}
+					}
+				});
+
+				/*
+				 * FULL CALENDAR JS
+				 */
+
+				if ($("#calendar").length) {
+					var date = new Date();
+					var d = date.getDate();
+					var m = date.getMonth();
+					var y = date.getFullYear();
+
+					var calendar = $('#calendar').fullCalendar({
+
+						editable : true,
+						draggable : true,
+						selectable : false,
+						selectHelper : true,
+						unselectAuto : false,
+						disableResizing : false,
+
+						header : {
+							left : 'title', //,today
+							center : 'prev, next, today',
+							right : 'month, agendaWeek, agenDay' //month, agendaDay,
+						},
+
+						select : function(start, end, allDay) {
+							var title = prompt('Event Title:');
+							if (title) {
+								calendar.fullCalendar('renderEvent', {
+									title : title,
+									start : start,
+									end : end,
+									allDay : allDay
+								}, true // make the event "stick"
+								);
+							}
+							calendar.fullCalendar('unselect');
+						},
+
+						events : [{
+							title : 'All Day Event',
+							start : new Date(y, m, 1),
+							description : 'long description',
+							className : ["event", "bg-color-greenLight"],
+							icon : 'fa-check'
+						}, {
+							title : 'Long Event',
+							start : new Date(y, m, d - 5),
+							end : new Date(y, m, d - 2),
+							className : ["event", "bg-color-red"],
+							icon : 'fa-lock'
+						}, {
+							id : 999,
+							title : 'Repeating Event',
+							start : new Date(y, m, d - 3, 16, 0),
+							allDay : false,
+							className : ["event", "bg-color-blue"],
+							icon : 'fa-clock-o'
+						}, {
+							id : 999,
+							title : 'Repeating Event',
+							start : new Date(y, m, d + 4, 16, 0),
+							allDay : false,
+							className : ["event", "bg-color-blue"],
+							icon : 'fa-clock-o'
+						}, {
+							title : 'Meeting',
+							start : new Date(y, m, d, 10, 30),
+							allDay : false,
+							className : ["event", "bg-color-darken"]
+						}, {
+							title : 'Lunch',
+							start : new Date(y, m, d, 12, 0),
+							end : new Date(y, m, d, 14, 0),
+							allDay : false,
+							className : ["event", "bg-color-darken"]
+						}, {
+							title : 'Birthday Party',
+							start : new Date(y, m, d + 1, 19, 0),
+							end : new Date(y, m, d + 1, 22, 30),
+							allDay : false,
+							className : ["event", "bg-color-darken"]
+						}, {
+							title : 'Smartadmin Open Day',
+							start : new Date(y, m, 28),
+							end : new Date(y, m, 29),
+							className : ["event", "bg-color-darken"]
+						}],
+
+						eventRender : function(event, element, icon) {
+							if (!event.description == "") {
+								element.find('.fc-event-title').append("<br/><span class='ultra-light'>" + event.description + "</span>");
+							}
+							if (!event.icon == "") {
+								element.find('.fc-event-title').append("<i class='air air-top-right fa " + event.icon + " '></i>");
+							}
+						}
+					});
+
+				};
+
+				// setup time slider
+        		var current_time = (new Date()).getTime() + ((new Date()).getTimezoneOffset() * 60 * 1000 * -1);
+				$("#build_1").click(function(){
+					$('#slider123').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-1').TimeSlider('remove', "c5");
+							$('#slider123-2').TimeSlider('remove', "c5");
+							$('#slider123-3').TimeSlider('remove', "c5");
+							$('#slider123-4').TimeSlider('remove', "c5");
+							$('#slider123').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 240 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-1').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123').TimeSlider('remove', "c5");
+							$('#slider123-2').TimeSlider('remove', "c5");
+							$('#slider123-3').TimeSlider('remove', "c5");
+							$('#slider123-4').TimeSlider('remove', "c5");
+							$('#slider123-1').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 120 * 1000)),
+		                           'stop': current_time + 3600 * 264  * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 264 * 1000)),
+		                           'stop': current_time + 3600 * 960 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 96 * 1000)),
+		                           'stop': current_time + 3600 * 96 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-2').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123').TimeSlider('remove', "c5");
+							$('#slider123-1').TimeSlider('remove', "c5");
+							$('#slider123-3').TimeSlider('remove', "c5");
+							$('#slider123-4').TimeSlider('remove', "c5");
+							$('#slider123-2').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 144 * 1000)),
+		                           'stop': current_time + 3600 * 24 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-3').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123').TimeSlider('remove', "c5");
+							$('#slider123-1').TimeSlider('remove', "c5");
+							$('#slider123-2').TimeSlider('remove', "c5");
+							$('#slider123-4').TimeSlider('remove', "c5");
+							$('#slider123-3').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-4').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123').TimeSlider('remove', "c5");
+							$('#slider123-1').TimeSlider('remove', "c5");
+							$('#slider123-2').TimeSlider('remove', "c5");
+							$('#slider123-3').TimeSlider('remove', "c5");
+							$('#slider123-4').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+				});
+				$("#build_3").click(function(){
+					$('#slider123-21').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							var new_diagrama = 
+								'{' +
+									'"_id":"c25",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-22').TimeSlider('remove', "c25");
+							$('#slider123-23').TimeSlider('remove', "c25");
+							$('#slider123-21').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c21',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c22',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c23',
+		                           'start': (current_time - (3600 * 240 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-22').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c25",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-21').TimeSlider('remove', "c25");
+							$('#slider123-23').TimeSlider('remove', "c25");
+							$('#slider123-22').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c21',
+		                           'start': (current_time + (3600 * 120 * 1000)),
+		                           'stop': current_time + 3600 * 264  * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c22',
+		                           'start': (current_time + (3600 * 264 * 1000)),
+		                           'stop': current_time + 3600 * 960 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c23',
+		                           'start': (current_time - (3600 * 96 * 1000)),
+		                           'stop': current_time + 3600 * 96 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-23').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c25",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-21').TimeSlider('remove', "c25");
+							$('#slider123-22').TimeSlider('remove', "c25");
+							$('#slider123-23').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c21',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c22',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c23',
+		                           'start': (current_time - (3600 * 144 * 1000)),
+		                           'stop': current_time + 3600 * 24 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+				});
+				$("#build_2").click(function(){
+					$('#slider123-31').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-32').TimeSlider('remove', "c5");
+							$('#slider123-33').TimeSlider('remove', "c5");
+							$('#slider123-34').TimeSlider('remove', "c5");
+							$('#slider123-35').TimeSlider('remove', "c5");
+							$('#slider123-36').TimeSlider('remove', "c5");
+							$('#slider123-37').TimeSlider('remove', "c5");
+							$('#slider123-31').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-32').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-31').TimeSlider('remove', "c5");
+							$('#slider123-33').TimeSlider('remove', "c5");
+							$('#slider123-34').TimeSlider('remove', "c5");
+							$('#slider123-35').TimeSlider('remove', "c5");
+							$('#slider123-36').TimeSlider('remove', "c5");
+							$('#slider123-37').TimeSlider('remove', "c5");
+							$('#slider123-32').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-33').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-31').TimeSlider('remove', "c5");
+							$('#slider123-32').TimeSlider('remove', "c5");
+							$('#slider123-34').TimeSlider('remove', "c5");
+							$('#slider123-35').TimeSlider('remove', "c5");
+							$('#slider123-36').TimeSlider('remove', "c5");
+							$('#slider123-37').TimeSlider('remove', "c5");
+							$('#slider123-33').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 120 * 1000)),
+		                           'stop': current_time + 3600 * 264  * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 264 * 1000)),
+		                           'stop': current_time + 3600 * 960 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 96 * 1000)),
+		                           'stop': current_time + 3600 * 96 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-34').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-31').TimeSlider('remove', "c5");
+							$('#slider123-32').TimeSlider('remove', "c5");
+							$('#slider123-33').TimeSlider('remove', "c5");
+							$('#slider123-35').TimeSlider('remove', "c5");
+							$('#slider123-36').TimeSlider('remove', "c5");
+							$('#slider123-37').TimeSlider('remove', "c5");
+							$('#slider123-34').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 144 * 1000)),
+		                           'stop': current_time + 3600 * 24 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-35').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-31').TimeSlider('remove', "c5");
+							$('#slider123-32').TimeSlider('remove', "c5");
+							$('#slider123-33').TimeSlider('remove', "c5");
+							$('#slider123-34').TimeSlider('remove', "c5");
+							$('#slider123-36').TimeSlider('remove', "c5");
+							$('#slider123-37').TimeSlider('remove', "c5");
+							$('#slider123-35').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       }
+						]
+					});
+					$('#slider123-36').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+					        console.log ("double vlick cell" );
+					        $("#student-consult").dialog({autoOpen : false, modal : true, show : "blind", hide : "blind"});
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							console.log ("double vlick rule" );
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-31').TimeSlider('remove', "c5");
+							$('#slider123-32').TimeSlider('remove', "c5");
+							$('#slider123-33').TimeSlider('remove', "c5");
+							$('#slider123-34').TimeSlider('remove', "c5");
+							$('#slider123-35').TimeSlider('remove', "c5");
+							$('#slider123-37').TimeSlider('remove', "c5");
+							$('#slider123-36').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       }
+						]
+					});
+		
+					$('#slider123-37').TimeSlider({
+						start_timestamp: current_time - 3600 * 120 * 1000,
+						hours_per_ruler: 720,
+						on_dblclick_timecell_callback:function(ui) {
+							$('#student-consult').dialog("open");
+						},
+						on_dblclick_ruler_callback:function(ui) {
+							var new_diagrama = 
+								'{' +
+									'"_id":"c5",' +
+									'"start":"' + (current_time + (3600 * 504 * 1000)) + '",' +
+									'"stop":"' + (current_time + (3600 * 960 * 1000)) + '",' +
+		                            '"style": {"background-color": "#FF0000"}' +
+								'}';
+							objJson = JSON.parse(new_diagrama);
+							$('#slider123-31').TimeSlider('remove', "c5");
+							$('#slider123-32').TimeSlider('remove', "c5");
+							$('#slider123-33').TimeSlider('remove', "c5");
+							$('#slider123-34').TimeSlider('remove', "c5");
+							$('#slider123-35').TimeSlider('remove', "c5");
+							$('#slider123-36').TimeSlider('remove', "c5");
+							$('#slider123-37').TimeSlider('add', objJson);
+						},
+						init_cells: [
+							{
+		                           '_id': 'c1',
+		                           'start': (current_time + (3600 * 48 * 1000)),
+		                           'stop': current_time + 3600 * 240  * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c2',
+		                           'start': (current_time + (3600 * 288 * 1000)),
+		                           'stop': current_time + 3600 * 480 * 1000,
+		                           'style': {
+		                               'background-color': '#66c2ff'
+		                           }
+		                       },
+							{
+		                           '_id': 'c3',
+		                           'start': (current_time - (3600 * 240 * 1000)),
+		                           'stop': current_time + 3600 * 48 * 1000,
+		                           'style': {
+		                               'background-color': '#ffe6f2'
+		                           }
+		                       }
+						]
+					});
+				});				// control modal
+				$("#modal_family").click(function(){
+			        $("#accommodation").modal('hide');
+			    });	
+				
+				// setup graph
+				$('table.highchart').highchartTable();
+
+			    // set filters
+				$('#filter_single').click(function() {
+					console.log ("hasclass - " + $( "#filter_single" ).hasClass( "btn-primary"))
+					if ($( "#filter_single" ).hasClass( "btn-primary")){
+						$('#filter_single').removeClass( "btn-primary" );
+						$('#filter_single').addClass( "btn-success" );
+						$('#filter_single_check').removeClass( "hide" );
+					}else{
+						$('#filter_single').removeClass( "btn-success" );
+						$('#filter_single').addClass( "btn-primary" );
+						$('#filter_single_check').addClass( "hide" );						
+					}
+				});
+				$('#filter_alergies').click(function() {
+					console.log ("hasclass - " + $( "#filter_alergies" ).hasClass( "btn-primary"))
+					if ($( "#filter_alergies" ).hasClass( "btn-primary")){
+						$('#filter_alergies').removeClass( "btn-primary" );
+						$('#filter_alergies').addClass( "btn-success" );
+						$('#filter_alergies_check').removeClass( "hide" );
+					}else{
+						$('#filter_alergies').removeClass( "btn-success" );
+						$('#filter_alergies').addClass( "btn-primary" );
+						$('#filter_alergies_check').addClass( "hide" );						
+					}
+				});
+				$('#filter_smoke').click(function() {
+					console.log ("hasclass - " + $( "#filter_smoke" ).hasClass( "btn-primary"))
+					if ($( "#filter_smoke" ).hasClass( "btn-primary")){
+						$('#filter_smoke').removeClass( "btn-primary" );
+						$('#filter_smoke').addClass( "btn-success" );
+						$('#filter_smoke_check').removeClass( "hide" );
+					}else{
+						$('#filter_smoke').removeClass( "btn-success" );
+						$('#filter_smoke').addClass( "btn-primary" );
+						$('#filter_smoke_check').addClass( "hide" );						
+					}
+				});
+				$('#filter_vegetarian').click(function() {
+					console.log ("hasclass - " + $( "#filter_vegetarian" ).hasClass( "btn-primary"))
+					if ($( "#filter_vegetarian" ).hasClass( "btn-primary")){
+						$('#filter_vegetarian').removeClass( "btn-primary" );
+						$('#filter_vegetarian').addClass( "btn-success" );
+						$('#filter_vegetarian_check').removeClass( "hide" );
+					}else{
+						$('#filter_vegetarian').removeClass( "btn-success" );
+						$('#filter_vegetarian').addClass( "btn-primary" );
+						$('#filter_vegetarian_check').addClass( "hide" );						
+					}
+				});
+				$('#filter_pets').click(function() {
+					console.log ("hasclass - " + $( "#filter_pets" ).hasClass( "btn-primary"))
+					if ($( "#filter_pets" ).hasClass( "btn-primary")){
+						$('#filter_pets').removeClass( "btn-primary" );
+						$('#filter_pets').addClass( "btn-success" );
+						$('#filter_pets_check').removeClass( "hide" );
+					}else{
+						$('#filter_pets').removeClass( "btn-success" );
+						$('#filter_pets').addClass( "btn-primary" );
+						$('#filter_pets_check').addClass( "hide" );						
+					}
+				});
+				$('#filter_halla').click(function() {
+					console.log ("hasclass - " + $( "#filter_halla" ).hasClass( "btn-primary"))
+					if ($( "#filter_halla" ).hasClass( "btn-primary")){
+						$('#filter_halla').removeClass( "btn-primary" );
+						$('#filter_halla').addClass( "btn-success" );
+						$('#filter_halla_check').removeClass( "hide" );
+					}else{
+						$('#filter_halla').removeClass( "btn-success" );
+						$('#filter_halla').addClass( "btn-primary" );
+						$('#filter_halla_check').addClass( "hide" );						
+					}
+				});
+
+			    // custom toolbar colocar o logo da folha free
+			    //$("div.toolbar").html('<div class="text-right"><img src="img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
+
+				/* hide default buttons */
+				$('.fc-header-right, .fc-header-center').hide();
+
+				// calendar prev
+				$('#calendar-buttons #btn-prev').click(function() {
+					$('.fc-button-prev').click();
+					return false;
+				});
+
+				// calendar next
+				$('#calendar-buttons #btn-next').click(function() {
+					$('.fc-button-next').click();
+					return false;
+				});
+
+				// calendar today
+				$('#calendar-buttons #btn-today').click(function() {
+					$('.fc-button-today').click();
+					return false;
+				});
+
+				// calendar month
+				$('#mt').click(function() {
+					$('#calendar').fullCalendar('changeView', 'month');
+				});
+
+				// calendar agenda week
+				$('#ag').click(function() {
+					$('#calendar').fullCalendar('changeView', 'agendaWeek');
+				});
+
+				// calendar agenda day
+				$('#td').click(function() {
+					$('#calendar').fullCalendar('changeView', 'agendaDay');
+				});
+
+				// iniialize date
+				$('#birthdate').datepicker({
+					dateFormat : 'dd.mm.yy',
+					prevText : '<i class="fa fa-chevron-left"></i>',
+					nextText : '<i class="fa fa-chevron-right"></i>',
+					onSelect : function(selectedDate) {
+						$('#birthdate').datepicker('option', 'minDate', selectedDate);
+					}
+				});
+
+				/* Formatting function for row details - modify as you need */
+				function format ( d ) {
+				    // `d` is the original data object for the row
+				    return '<table cellpadding="5" cellspacing="0" border="0" class="table table-hover table-condensed">'+
+				        '<tr>'+
+				            '<td style="width:100px">Another filters:</td>'+
+				            '<td>'+d.filters+'</td>'+
+				        '</tr>'+
+				        '<tr>'+
+				            '<td style="width:100px">Accommodation:</td>'+
+				            '<td>'+d.accommodation+'</td>'+
+				        '</tr>'+
+				        '<tr>'+
+				            '<td>Important informations:</td>'+
+				            '<td>'+d.informations+'</td>'+
+				        '</tr>'+
+				        '<tr>'+
+				            '<td>Comments:</td>'+
+				            '<td>'+d.comments+'</td>'+
+				        '</tr>'+
+				        '<tr>'+
+				            '<td>Action:</td>'+
+				            '<td>'+d.actions+'</td>'+
+				        '</tr>'+
+				    '</table>';
+				}
+
+				
+				/* BASIC datatables*/
+
+				var responsiveHelper_dt_basic = undefined;
+				var responsiveHelper_accommodation_list = undefined;
+				var responsiveHelper_accommodation_dorms_list = undefined;
+				var responsiveHelper_families_list = undefined;
+				var responsiveHelper_family_list = undefined;
+				var responsiveHelper_student_list = undefined;
+				var responsiveHelper_pickup_list = undefined;
+				var responsiveHelper_datatable_col_reorder = undefined;
+				var responsiveHelper_datatable_tabletools = undefined;
+				
+				var breakpointDefinition = {
+					tablet : 1024,
+					phone : 480
+				};
+			     
+				/* Accommodation list  */
+			    var otable = $('#accommodation_list').DataTable({
+			    	//"bFilter": false,
+			    	//"bInfo": false,
+			    	//"bLengthChange": false
+			    	//"bAutoWidth": false,
+			    	//"bPaginate": false,
+			    	//"bStateSave": true // saves sort state using localStorage
+					"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
+							"t"+
+							"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					"autoWidth" : true,
+					"preDrawCallback" : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_accommodation_list) {
+							responsiveHelper_accommodation_list = new ResponsiveDatatablesHelper($('#accommodation_list'), breakpointDefinition);
+						}
+					},
+					"rowCallback" : function(nRow) {
+						responsiveHelper_accommodation_list.createExpandIcon(nRow);
+					},
+					"drawCallback" : function(oSettings) {
+						responsiveHelper_accommodation_list.respond();
+					},		
+			        "ajax": "data/dataList.json",
+			        "bDestroy": true,
+			        "iDisplayLength": 15,
+			        "columns": [
+			            {
+			                "class":          'details-control',
+			                "orderable":      false,
+			                "data":           null,
+			                "defaultContent": ''
+			            },
+			            { "data": "name" },
+			            { "data": "period" },
+			            { "data": "status" },
+			            { "data": "gender" },
+			            { "data": "alergies" },
+			            { "data": "smoke" },
+			            { "data": "agency" },
+			            { "data": "school" },
+			        ],
+			        "order": [[1, 'asc']],
+			        "fnDrawCallback": function( oSettings ) {
+				       runAllCharts()
+				    }
+				
+			    });
+
+				// Add event listener for opening and closing details
+			    $('#accommodation_list tbody').on('click', 'td.details-control', function () {
+			        var tr = $(this).closest('tr');
+			        var row = otable.row( tr );
+			 
+			        if ( row.child.isShown() ) {
+			            // This row is already open - close it
+			            row.child.hide();
+			            tr.removeClass('shown');
+			        }
+			        else {
+			            // Open this row
+			            row.child( format(row.data()) ).show();
+			            tr.addClass('shown');
+			        }
+			    });
+			    	   
+			    // Apply the filter
+			    $("#accommodation_list thead th input[type=text]").on( 'keyup change', function () {
+			    	
+			        otable
+			            .column( $(this).parent().index()+':visible' )
+			            .search( this.value )
+			            .draw();
+			            
+			    } );
+			    /* end accommodation list */   
+			     
+				/* Accommodation dorms list  */
+			    var accommodation_dorms_list = $('#accommodation_dorms_list').DataTable({
+			    	//"bFilter": false,
+			    	//"bInfo": false,
+			    	//"bLengthChange": false
+			    	//"bAutoWidth": false,
+			    	//"bPaginate": false,
+			    	//"bStateSave": true // saves sort state using localStorage
+					"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
+							"t"+
+							"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					"autoWidth" : true,
+					"preDrawCallback" : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_accommodation_dorms_list) {
+							responsiveHelper_accommodation_dorms_list = new ResponsiveDatatablesHelper($('#accommodation_dorms_list'), breakpointDefinition);
+						}
+					},
+					"rowCallback" : function(nRow) {
+						responsiveHelper_accommodation_dorms_list.createExpandIcon(nRow);
+					},
+					"drawCallback" : function(oSettings) {
+						responsiveHelper_accommodation_dorms_list.respond();
+					},		
+			        "ajax": "data/accommodation_dorms.json",
+			        "bDestroy": true,
+			        "iDisplayLength": 15,
+			        "columns": [
+			            {
+			                "class":          'details-control',
+			                "orderable":      false,
+			                "data":           null,
+			                "defaultContent": ''
+			            },
+			            { "data": "name" },
+			            { "data": "period" },
+			            { "data": "status" },
+			            { "data": "gender" },
+			            { "data": "alergies" },
+			            { "data": "smoke" },
+			            { "data": "agency" },
+			            { "data": "school" },
+			        ],
+			        "order": [[1, 'asc']],
+			        "fnDrawCallback": function( oSettings ) {
+				       runAllCharts()
+				    }
+				
+			    });
+
+				// Add event listener for opening and closing details
+			    $('#accommodation_dorms_list tbody').on('click', 'td.details-control', function () {
+			        var tr = $(this).closest('tr');
+			        var row = accommodation_dorms_list.row( tr );
+			 
+			        if ( row.child.isShown() ) {
+			            // This row is already open - close it
+			            row.child.hide();
+			            tr.removeClass('shown');
+			        }
+			        else {
+			            // Open this row
+			            row.child( format(row.data()) ).show();
+			            tr.addClass('shown');
+			        }
+			    });
+			    	   
+			    // Apply the filter
+			    $("#accommodation_dorms_list thead th input[type=text]").on( 'keyup change', function () {
+			    	
+			        accommodation_dorms_list
+			            .column( $(this).parent().index()+':visible' )
+			            .search( this.value )
+			            .draw();
+			            
+			    } );
+			    /* end accommodation list */   
+			     
+				/* Families list  */
+			    var families_table = $('#families_list').DataTable({
+			    	//"bFilter": false,
+			    	//"bInfo": false,
+			    	//"bLengthChange": false
+			    	//"bAutoWidth": false,
+			    	//"bPaginate": false,
+			    	//"bStateSave": true // saves sort state using localStorage
+					"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
+							"t"+
+							"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					"autoWidth" : true,
+					"preDrawCallback" : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_families_list) {
+							responsiveHelper_families_list = new ResponsiveDatatablesHelper($('#families_list'), breakpointDefinition);
+						}
+					},
+					"rowCallback" : function(nRow) {
+						responsiveHelper_families_list.createExpandIcon(nRow);
+					},
+					"drawCallback" : function(oSettings) {
+						responsiveHelper_families_list.respond();
+					},		
+			        "ajax": "data/accommodation_family.json",
+			        "bDestroy": true,
+			        "iDisplayLength": 15,
+			        "columns": [
+			            {
+			                "class":          'details-control',
+			                "orderable":      false,
+			                "data":           null,
+			                "defaultContent": ''
+			            },
+			            { "data": "name" },
+			            { "data": "status" },
+			            { "data": "gender" },
+			            { "data": "alergies" },
+			            { "data": "smoke" },
+			            { "data": "vegetarian" },
+			            { "data": "pets" },
+			            { "data": "halla" },
+			        ],
+			        "order": [[1, 'asc']],
+			        "fnDrawCallback": function( oSettings ) {
+				       runAllCharts()
+				    }
+				
+			    });
+
+				// Add event listener for opening and closing details
+			    $('#families_list tbody').on('click', 'td.details-control', function () {
+			        var tr = $(this).closest('tr');
+			        var row = families_table.row( tr );
+			 
+			        if ( row.child.isShown() ) {
+			            // This row is already open - close it
+			            row.child.hide();
+			            tr.removeClass('shown');
+			        }
+			        else {
+			            // Open this row
+			            row.child( format(row.data()) ).show();
+			            tr.addClass('shown');
+			        }
+			    });
+			    
+			    // Apply the filter
+			    $("#families_list thead th input[type=text]").on( 'keyup change', function () {
+			    	
+			        families_table
+			            .column( $(this).parent().index()+':visible' )
+			            .search( this.value )
+			            .draw();
+			            
+			    } );
+			    /* end families list */   
+			     
+				/* Family list  II*/
+			    var family_table = $('#family_list').DataTable({
+			    	//"bFilter": false,
+			    	//"bInfo": false,
+			    	//"bLengthChange": false
+			    	//"bAutoWidth": false,
+			    	//"bPaginate": false,
+			    	//"bStateSave": true // saves sort state using localStorage
+					"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
+							"t"+
+							"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					"autoWidth" : true,
+					"preDrawCallback" : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_family_list) {
+							responsiveHelper_family_list = new ResponsiveDatatablesHelper($('#family_list'), breakpointDefinition);
+						}
+					},
+					"rowCallback" : function(nRow) {
+						responsiveHelper_family_list.createExpandIcon(nRow);
+					},
+					"drawCallback" : function(oSettings) {
+						responsiveHelper_family_list.respond();
+					},		
+			        "ajax": "data/family.json",
+			        "bDestroy": true,
+			        "iDisplayLength": 15,
+			        "columns": [
+			            {
+			                "class":          'details-control',
+			                "orderable":      false,
+			                "data":           null,
+			                "defaultContent": ''
+			            },
+			            { "data": "name" },
+			        ],
+			        "order": [[1, 'asc']],
+			        "fnDrawCallback": function( oSettings ) {
+				       runAllCharts()
+				    }
+				
+			    });
+
+				// Add event listener for opening and closing details
+			    $('#family_list tbody').on('click', 'td.details-control', function () {
+			        var tr = $(this).closest('tr');
+			        var row = family_table.row( tr );
+			 
+			        if ( row.child.isShown() ) {
+			            // This row is already open - close it
+			            row.child.hide();
+			            tr.removeClass('shown');
+			        }
+			        else {
+			            // Open this row
+			            row.child( format(row.data()) ).show();
+			            tr.addClass('shown');
+			        }
+			    });
+			    
+			    // Apply the filter
+			    $("#family_list thead th input[type=text]").on( 'keyup change', function () {
+			    	
+			        family_table
+			            .column( $(this).parent().index()+':visible' )
+			            .search( this.value )
+			            .draw();
+			            
+			    } );
+			    /* end family list */   
+			     
+				/* student list  II*/
+			    var student_list = $('#student_list').DataTable({
+			    	//"bFilter": false,
+			    	//"bInfo": false,
+			    	//"bLengthChange": false
+			    	//"bAutoWidth": false,
+			    	//"bPaginate": false,
+			    	//"bStateSave": true // saves sort state using localStorage
+					"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
+							"t"+
+							"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					"autoWidth" : true,
+					"preDrawCallback" : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_student_list) {
+							responsiveHelper_student_list = new ResponsiveDatatablesHelper($('#student_list'), breakpointDefinition);
+						}
+					},
+					"rowCallback" : function(nRow) {
+						responsiveHelper_student_list.createExpandIcon(nRow);
+					},
+					"drawCallback" : function(oSettings) {
+						responsiveHelper_student_list.respond();
+					},		
+			        "ajax": "data/student.json",
+			        "bDestroy": true,
+			        "iDisplayLength": 15,
+			        "columns": [
+			            {
+			                "class":          'details-control',
+			                "orderable":      false,
+			                "data":           null,
+			                "defaultContent": ''
+			            },
+			            { "data": "name" },
+			        ],
+			        "order": [[1, 'asc']],
+			        "fnDrawCallback": function( oSettings ) {
+				       runAllCharts()
+				    }
+				
+			    });
+
+				// Add event listener for opening and closing details
+			    $('#student_list tbody').on('click', 'td.details-control', function () {
+			        var tr = $(this).closest('tr');
+			        var row = student_list.row( tr );
+			 
+			        if ( row.child.isShown() ) {
+			            // This row is already open - close it
+			            row.child.hide();
+			            tr.removeClass('shown');
+			        }
+			        else {
+			            // Open this row
+			            row.child( format(row.data()) ).show();
+			            tr.addClass('shown');
+			        }
+			    });
+			    
+			    // Apply the filter
+			    $("#student_list thead th input[type=text]").on( 'keyup change', function () {
+			    	
+			        student_list
+			            .column( $(this).parent().index()+':visible' )
+			            .search( this.value )
+			            .draw();
+			            
+			    } );
+			    /* end student list */   
+			     
+				/* pickup list  II*/
+			    var pickup_list = $('#pickup_list').DataTable({
+			    	//"bFilter": false,
+			    	//"bInfo": false,
+			    	//"bLengthChange": false
+			    	//"bAutoWidth": false,
+			    	//"bPaginate": false,
+			    	//"bStateSave": true // saves sort state using localStorage
+					"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
+							"t"+
+							"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+					"autoWidth" : true,
+					"preDrawCallback" : function() {
+						// Initialize the responsive datatables helper once.
+						if (!responsiveHelper_pickup_list) {
+							responsiveHelper_pickup_list = new ResponsiveDatatablesHelper($('#pickup_list'), breakpointDefinition);
+						}
+					},
+					"rowCallback" : function(nRow) {
+						responsiveHelper_pickup_list.createExpandIcon(nRow);
+					},
+					"drawCallback" : function(oSettings) {
+						responsiveHelper_pickup_list.respond();
+					},		
+			        "ajax": "data/pickup.json",
+			        "bDestroy": true,
+			        "iDisplayLength": 15,
+			        "columns": [
+			            {
+			                "class":          'details-control',
+			                "orderable":      false,
+			                "data":           null,
+			                "defaultContent": ''
+			            },
+			            { "data": "name" },
+			            { "data": "arrival" },
+			            { "data": "status" },
+			            { "data": "flight" },
+			            { "data": "accommodation" },
+			            { "data": "driver" },
+			        ],
+			        "order": [[1, 'asc']],
+			        "fnDrawCallback": function( oSettings ) {
+				       runAllCharts()
+				    }
+				
+			    });
+
+				// Add event listener for opening and closing details
+			    $('#pickup_list tbody').on('click', 'td.details-control', function () {
+			        var tr = $(this).closest('tr');
+			        var row = pickup_list.row( tr );
+			 
+			        if ( row.child.isShown() ) {
+			            // This row is already open - close it
+			            row.child.hide();
+			            tr.removeClass('shown');
+			        }
+			        else {
+			            // Open this row
+			            row.child( format(row.data()) ).show();
+			            tr.addClass('shown');
+			        }
+			    });
+			    
+			    // Apply the filter
+			    $("#pickup_list thead th input[type=text]").on( 'keyup change', function () {
+			    	
+			        pickup_list
+			            .column( $(this).parent().index()+':visible' )
+			            .search( this.value )
+			            .draw();
+			            
+			    } );
+			    /* end pickup list */   
+		// Maps
+			var pagefunction = function() {
+
+			    /*jslint smarttabs:true */
+				var colorful_style = [{
+			
+					"featureType" : "landscape",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "transit",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "poi.park",
+					"elementType" : "labels",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "poi.park",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"color" : "#d3d3d3"
+					}, {
+						"visibility" : "on"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "geometry.stroke",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "landscape",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#b1bc39"
+					}]
+				}, {
+					"featureType" : "landscape.man_made",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#ebad02"
+					}]
+				}, {
+					"featureType" : "water",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#416d9f"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "labels.text.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#000000"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "labels.text.stroke",
+					"stylers" : [{
+						"visibility" : "off"
+					}, {
+						"color" : "#ffffff"
+					}]
+				}, {
+					"featureType" : "administrative",
+					"elementType" : "labels.text.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#000000"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#ffffff"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "labels.icon",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "water",
+					"elementType" : "labels",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "poi",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"color" : "#ebad02"
+					}]
+				}, {
+					"featureType" : "poi.park",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"color" : "#8ca83c"
+					}]
+				}];
+				
+				// Retro
+				var metro_style = [{
+					"featureType" : "transit",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "poi.park",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"color" : "#d3d3d3"
+					}, {
+						"visibility" : "on"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "geometry.stroke",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "landscape",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#eee8ce"
+					}]
+				}, {
+					"featureType" : "water",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#b8cec9"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "labels.text.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#000000"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "labels.text.stroke",
+					"stylers" : [{
+						"visibility" : "off"
+					}, {
+						"color" : "#ffffff"
+					}]
+				}, {
+					"featureType" : "administrative",
+					"elementType" : "labels.text.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#000000"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"visibility" : "on"
+					}, {
+						"color" : "#ffffff"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "geometry.stroke",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "road",
+					"elementType" : "labels.icon",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "water",
+					"elementType" : "labels",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}, {
+					"featureType" : "poi",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"color" : "#d3cdab"
+					}]
+				}, {
+					"featureType" : "poi.park",
+					"elementType" : "geometry.fill",
+					"stylers" : [{
+						"color" : "#ced09d"
+					}]
+				}, {
+					"featureType" : "poi",
+					"elementType" : "labels",
+					"stylers" : [{
+						"visibility" : "off"
+					}]
+				}];
+				/*
+				 * Google Maps Initialize
+				 */
+			
+			
+				
+			    $this = $("#map_canvas");
+			    $zoom_level = ($this.data("gmap-zoom") || 5);
+			    $data_lat = ($this.data("gmap-lat") || 29.895883);
+			    $data_lng = ($this.data("gmap-lng") || -80.650635);
+			    $xml_src = ($this.data("gmap-src") || "xml/gmap/pins.xml");
+			
+			    var metroStyleMap = new google.maps.StyledMapType(metro_style, {
+			        name: "Metro"
+			    });
+							
+			    // Metro Style
+			    function generate_map_7() {
+			
+			        var mapOptions = {
+			            center: new google.maps.LatLng(41.38155, 2.13752),
+			            zoom: 12,
+			        };
+			        map = new google.maps.Map(document.getElementById('map_canvas7'), mapOptions);
+			
+			        // Setup skin for the map
+			        map.mapTypes.set('metro_style', metroStyleMap);
+			        map.setMapTypeId('metro_style');
+			
+			    }
+			
+			    generate_map_7();
+			
+			};
+			$(window).unbind('gMapsLoaded');
+			$(window).bind('gMapsLoaded', pagefunction);
+			window.loadGoogleMaps();
+		
+		});
+		    
 		</script>
 
 		<!-- Your GOOGLE ANALYTICS CODE Below -->

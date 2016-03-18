@@ -3,12 +3,12 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Casa Mundo JQuery Web Application</display-name>
+  <display-name>Foha Free JQuery Web Application</display-name>
   
   
 	<servlet-mapping>
-		<servlet-name>casamundo</servlet-name>
-		<url-pattern>/casamundo</url-pattern>
+		<servlet-name>folhafree</servlet-name>
+		<url-pattern>/folhafree</url-pattern>
 	</servlet-mapping>
   
 </web-app>

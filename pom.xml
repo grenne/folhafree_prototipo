@@ -4,7 +4,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
-	<finalName>folhafree</finalName>
+	<finalName>folhafree_prototipo</finalName>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
